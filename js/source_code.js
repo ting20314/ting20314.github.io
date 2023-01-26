@@ -147,31 +147,7 @@ OSM = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     "Route option 5": MAXVORSTADT
 };
 
-
-//var layerControl =
-L.control.layers(baseMaps, routes).addTo(map);
-//add maker
-map.on('click', addMarker);
-
-
-//add Google sheet
-Papa.parse(pointsURL, {
-    download: true,
-    header: true,
-    complete: addPoints,
-  });
-
-
-
-});
-document.getElementById('select-station').addEventListener('change', function(e){
-    let coords = e.target.value.split(",");
-    map.flyTo(coords,19);
-
-});
-
-
-
+	
 //add google sheet point
 function addPoints(data) {
   data = data.data;
@@ -204,15 +180,44 @@ function addPoints(data) {
 //    };
    }
 
-//    // AwesomeMarkers is used to create fancier icons
-//    let icon = L.AwesomeMarkers.icon({
-//      icon: "info-circle",
-//      iconColor: "white",
-//      markerColor: data[row].color,
-//      prefix: "fa",
-//      extraClasses: "fa-rotate-0",
-//    });
-//    if (!markerType.includes("circle")) {
-//      marker.setIcon(icon);
-//    }
-  }
+    // AwesomeMarkers is used to create fancier icons
+    let icon = L.AwesomeMarkers.icon({
+      icon: "info-circle",
+      iconColor: "white",
+      markerColor: data[row].color,
+      prefix: "fa",
+      extraClasses: "fa-rotate-0",
+    });
+    if (!markerType.includes("circle")) {
+      marker.setIcon(icon);
+    }
+  }	
+	
+	
+	
+
+//var layerControl =
+L.control.layers(baseMaps, routes).addTo(map);
+//add maker
+map.on('click', addMarker);
+
+
+//add Google sheet
+Papa.parse(pointsURL, {
+    download: true,
+    header: true,
+    complete: addPoints,
+  });
+
+
+
+});
+document.getElementById('select-station').addEventListener('change', function(e){
+    let coords = e.target.value.split(",");
+    map.flyTo(coords,19);
+
+});
+
+
+
+

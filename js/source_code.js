@@ -124,16 +124,6 @@ OSM = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
     });
 
-    //create circle if location found
-    map.on('locationfound',function (e) {
-        if(mrkCurrentLocation){
-            mrkCurrentLocation.remove();
-        }
-        mrkCurrentLocation = L.circleMarker(e.latlng).addTo(map);
-        //mrkCurrentLocation = L.circle(e.latlng, {radius:e.accuracy/4}).addTo(map);
-        map.setView(e.latlng, 18);
-    });
-
     baseMaps = {
     "Dark": Dark,
     "OSM": OSM
@@ -148,6 +138,33 @@ OSM = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 };
 
 	
+	
+	
+	
+	
+
+//var layerControl =
+L.control.layers(baseMaps, routes).addTo(map);
+//add maker
+map.on('click', addMarker);
+
+
+//add Google sheet
+Papa.parse(pointsURL, {
+    download: true,
+    header: true,
+    complete: addPoints,
+  });
+
+
+
+});
+document.getElementById('select-station').addEventListener('change', function(e){
+    let coords = e.target.value.split(",");
+    map.flyTo(coords,19);
+
+});
+
 //add google sheet point
 function addPoints(data) {
   data = data.data;
@@ -191,33 +208,6 @@ function addPoints(data) {
     if (!markerType.includes("circle")) {
       marker.setIcon(icon);
     }
-  }	
-	
-	
-	
-
-//var layerControl =
-L.control.layers(baseMaps, routes).addTo(map);
-//add maker
-map.on('click', addMarker);
-
-
-//add Google sheet
-Papa.parse(pointsURL, {
-    download: true,
-    header: true,
-    complete: addPoints,
-  });
-
-
-
-});
-document.getElementById('select-station').addEventListener('change', function(e){
-    let coords = e.target.value.split(",");
-    map.flyTo(coords,19);
-
-});
-
-
+  }
 
 

@@ -184,6 +184,7 @@ function addPoints(data) {
     for (let row = 0; row < data.length; row++) {
         let marker;
         marker = L.marker([data[row].lat, data[row].lng]);
+	    document.getElementById("demo").innerHTML = [data[row].lat, data[row].lng]
 //        marker = L.marker([data[row].lat, data[row].lng]).bindPopup("<b>" + data[row].Type + '</b><br>' +
 //          (data[row].Image ? ('<img src="' + data[row].Image + '"><br>') : '') +
 //          data[row].Position + data[row].Scale);

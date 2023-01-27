@@ -20,7 +20,7 @@
 </head>
 <body>
     <h1>1, 2, 3, 4 für alle</h1>
-    <h3>ss</h3>
+    <h3>sas</h3>
     <p>Insert description of the project<br>This website is about this</p>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js" integrity="sha512-SGWgwwRA8xZgEoKiex3UubkSkV1zSE1BS6O4pXcaxcNtUlQsOmOmhVnDwIvqGRfEmuz83tIGL13cXMZn6upPyg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <select name="select station" id="select-station">
@@ -102,15 +102,17 @@
                             let marker;
                             var icon_url = "https://drive.google.com/uc?export=view&id="+data[row].Image.substring(33,data[row].Image.length);
                             marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon}).bindPopup("<b>" + data[row].Type + '</b><br>' +data[row].Position + data[row].Scale+"<img src=" + icon_url +" class=ppsize "+ "> " ,{className: leaflet-popup-content-wrapper});
-                               marker.addTo(map);
+                            document.write("L.maker");
+                            marker.addTo(map);
 //                             .on('click', function () {box.toggle();})
                     	}
                     }
 
                     function te(){
                         let pointsURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTh7dQ0JPgZNoagkd77B4S-5xZRpPFHXjXOA5Z7JKNITb4YGw31Pqro_k8Rlo1Gy1D_5YZy7TcvT_li/pub?gid=1170715324&single=true&output=csv";
-
+                        
                         Papa.parse(pointsURL, {download: true,header: true,complete: addPoints,});
+                        document.write("papa");
                         }
 
 
@@ -135,7 +137,7 @@
 
         </div>
     </div>
-   <script>te();</script>
+   <script>document.write("before te");te();</script>
 <!--     <script>boxANm();</script>> -->
 
 

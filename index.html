@@ -20,6 +20,7 @@
 </head>
 <body>
     <h1>1, 2, 3, 4 für alle</h1>
+    <h3>ss</h3>
     <p>Insert description of the project<br>This website is about this</p>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js" integrity="sha512-SGWgwwRA8xZgEoKiex3UubkSkV1zSE1BS6O4pXcaxcNtUlQsOmOmhVnDwIvqGRfEmuz83tIGL13cXMZn6upPyg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <select name="select station" id="select-station">
@@ -81,17 +82,17 @@
     </select>
     <!--Google Sheet-->
     <script>
-                    function boxANm(){
-                        var box = L.control.sidebar('box', { closeButton: true,position: 'left'});
-                        map.addControl(box);
-                        L.control.polylineMeasure().addTo(map);
-                        map.on('click', function () {box.hide();})
-                        box.on('show', function () {console.log('Box will be visible.');});
-                        box.on('shown', function () {console.log('Box is visible.');});
-                        box.on('hide', function () {console.log('Box will be hidden.');});
-                        box.on('hidden', function () {console.log('Box is hidden.');});
-                        L.DomEvent.on(sidebar.getCloseButton(), 'click', function () {console.log('Close button clicked.');});
-                    }
+//                     function boxANm(){
+//                         var box = L.control.sidebar('box', { closeButton: true,position: 'left'});
+//                         map.addControl(box);
+//                         L.control.polylineMeasure().addTo(map);
+//                         map.on('click', function () {box.hide();})
+//                         box.on('show', function () {console.log('Box will be visible.');});
+//                         box.on('shown', function () {console.log('Box is visible.');});
+//                         box.on('hide', function () {console.log('Box will be hidden.');});
+//                         box.on('hidden', function () {console.log('Box is hidden.');});
+//                         L.DomEvent.on(sidebar.getCloseButton(), 'click', function () {console.log('Close button clicked.');});
+//                     }
 
                     function addPoints(data) {
                         data = data.data;
@@ -101,7 +102,8 @@
                             let marker;
                             var icon_url = "https://drive.google.com/uc?export=view&id="+data[row].Image.substring(33,data[row].Image.length);
                             marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon}).bindPopup("<b>" + data[row].Type + '</b><br>' +data[row].Position + data[row].Scale+"<img src=" + icon_url +" class=ppsize "+ "> " ,{className: leaflet-popup-content-wrapper});
-                               marker.addTo(map).on('click', function () {box.toggle();});
+                               marker.addTo(map);
+//                             .on('click', function () {box.toggle();})
                     	}
                     }
 
@@ -134,7 +136,7 @@
         </div>
     </div>
    <script>te();</script>
-    <script>boxANm();</script>>
+<!--     <script>boxANm();</script>> -->
 
 
     <!-- <div id="map"></div> -->

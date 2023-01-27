@@ -98,18 +98,10 @@
                         for (let row = 0; row < data.length; row++) 
                         {
                             let marker;
-                            var icon_url = data[row].Image;
-//                             marker = L.marker([data[row].lat, data[row].lng]).bindPopup("<b>" + data[row].Type + '</b><br>' +data[row].Position + data[row].Scale+"<img src=" + icon_url + "/> " );
-// //          (point['Image'] ? ('<img src="' + data[row].Image + '"><br>') : '') +
-//                                marker.addTo(map);
-// //                             .bindPopup("<b>" + data[row].Type + '</b><br>' +
-// //          (point['Image'] ? ('<img src="' + data[row].Image + '"><br>') : '') +
-// //          data[row].Position + data[row].Scale)
+                            var icon_url = "https://drive.google.com/uc?export=view&id="+data[row].Image.substring(33,data[row].Image.length);
+                            marker = L.marker([data[row].lat, data[row].lng]).bindPopup("<b>" + data[row].Type + '</b><br>' +data[row].Position + data[row].Scale+"<img src=" + icon_url + "/> " );
+                               marker.addTo(map);
 
-//                             document.write(data[row].Image);
-                            var UR=data[row].Image;
-//                             document.write(UR.length);
-                            document.write(data[row].Image.substring(33,data[row].Image.length),",");
                     	}
                     }
                     
@@ -121,12 +113,9 @@
                 </script>
                 
                 
-        <script>
-                    te();
-                      
-            </script>
         
-<!--     <div class="container-fluid">
+        
+    <div class="container-fluid">
         <div class="row">
             
             <div id="map_div" class="col-md-12"> </div>
@@ -137,8 +126,11 @@
             </div>
           
     </div>
-</div> -->
-
+</div>
+<script>
+                    te();
+                      
+            </script>
 </body>
 
 

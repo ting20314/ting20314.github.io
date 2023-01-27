@@ -1,153 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-
-        <meta charset="UTF-8">
-        <title>Mapping Project</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="lib/leaflet/leaflet.css">
-        <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
-        <!--    plugins-->
-        <link rel="stylesheet" href="lib/leaflet/plugins/L.Control.Pan.css">
-        <link rel="stylesheet" href="lib/leaflet/plugins/L.Control.Zoomslider.css">
-        <link rel="stylesheet" href="lib/leaflet/plugins/L.Control.MousePosition.css">
-        <link rel="stylesheet" href="lib/leaflet/plugins/Leaflet.PolylineMeasure.css">
-        <link rel="stylesheet" href="lib/leaflet/plugins/easy-button.css">
-        <link rel="stylesheet" href="lib/leaflet/plugins/L.Control.Sidebar.css">
-
-        <!--    plugins-->
-
-        <link rel="stylesheet" href="css/style.css">
-<style>
-.ppsize {    max-width: 200%;
-    max-height: 200%;}
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+    <link rel="stylesheet" type="text/css" href="map.css">
+    <link rel="stylesheet" href="Leaflet.PolylineMeasure.css">
+    <link rel="stylesheet" href="https://ppete2.github.io/Leaflet.PolylineMeasure/Leaflet.PolylineMeasure.css" />
+    <link rel="stylesheet" href="L.Control.Sidebar.css">
+    <style>
+.ppsize {    max-width: 100%;
+    max-height: 100%;}
 </style>
+    <title>Mapping Project</title>
+</head>
+<body>
+    <h1>1, 2, 3, 4 für alle</h1>
+    <p>Insert description of the project<br>This website is about this</p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js" integrity="sha512-SGWgwwRA8xZgEoKiex3UubkSkV1zSE1BS6O4pXcaxcNtUlQsOmOmhVnDwIvqGRfEmuz83tIGL13cXMZn6upPyg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <select name="select station" id="select-station">
+        <option value="48.14843,11.57549">Select one of the U-Bahn stations</option>
+        <option value="-1">1 - ALTSTADT-LEHEL - </option>
+        <option value="48.13724, 11.57563">Marienplatz</option>
+        <option value="48.13938, 11.56585">Karlsplatz</option>
+        <option value="48.13356, 11.56711">Sendlinger Tor</option>
+        <option value="48.13988, 11.58683">Lehel</option>
+        <option value="48.14274, 11.57754">Odeonsplatz</option>
+        <option value="-1">2 - LUDWIGSVORSTADT-ISARVORSTADT - </option>
+        <option value="48.14026, 11.56064">München Hauptbahnhof</option>
+        <option value="48.13635, 11.55326">Theresienwiese</option>
+        <option value="48.12958, 11.55845">Goetheplatz</option>
+        <option value="48.12917, 11.57439">Fraunhoferstraße</option>
+        <option value="48.12573, 11.55057">Poccistraße</option>
+        <option value="-1">3 - MAXVORSTADT - </option>
+        <option value="48.15003, 11.54571">Maillingerstraße</option>
+        <option value="48.14507, 11.56337">Königsplatz</option>
+        <option value="48.15113, 11.56418">Theresienstraße</option>
+        <option value="48.15577, 11.56680">Josephsplatz</option>
+        <option value="48.14965, 11.58081">Universität</option>
+        <option value="48.14790, 11.55685">Stiglmaierplatz</option>
+        <option value="-1">4 - SCHWABING-WEST - </option>
+        <option value="48.16218, 11.56867">Hohenzollernplatz</option>
+        <option value="48.16683, 11.57867">Bonner Platz</option>
+        <option value="48.17121, 11.57288">Scheidplatz</option>
+        <option value="48.17553, 11.56641">Petuelring</option>
+    </select>
 
 
 
+    <select name="select housing" id="select-housing">
+        <option value="-1">Select one of the housing options</option>
+        <option value="-1">1 - ALTSTADT-LEHEL - </option>
+        <option value="48.13724, 11.57563">Marienplatz</option>
+        <option value="48.13938, 11.56585">Karlsplatz</option>
+        <option value="48.13356, 11.56711">Sendlinger Tor</option>
+        <option value="48.13988, 11.58683">Lehel</option>
+        <option value="48.14274, 11.57754">Odeonsplatz</option>
+        <option value="-1">2 - LUDWIGSVORSTADT-ISARVORSTADT - </option>
+        <option value="48.14026, 11.56064">München Hauptbahnhof</option>
+        <option value="48.13635, 11.55326">Theresienwiese</option>
+        <option value="48.12958, 11.55845">Goetheplatz</option>
+        <option value="48.12917, 11.57439">Fraunhoferstraße</option>
+        <option value="48.12573, 11.55057">Poccistraße</option>
+        <option value="-1">3 - MAXVORSTADT - </option>
+        <option value="48.15003, 11.54571">Maillingerstraße</option>
+        <option value="48.14507, 11.56337">Königsplatz</option>
+        <option value="48.15113, 11.56418">Theresienstraße</option>
+        <option value="48.15577, 11.56680">Josephsplatz</option>
+        <option value="48.14965, 11.58081">Universität</option>
+        <option value="48.14790, 11.55685">Stiglmaierplatz</option>
+        <option value="-1">4 - SCHWABING-WEST - </option>
+        <option value="48.16218, 11.56867">Hohenzollernplatz</option>
+        <option value="48.16683, 11.57867">Bonner Platz</option>
+        <option value="48.17121, 11.57288">Scheidplatz</option>
+        <option value="48.17553, 11.56641">Petuelring</option>
+    </select>
+    <!--Google Sheet-->
+    <script>
+                    function boxANm(){
+                        var box = L.control.sidebar('box', { closeButton: true,position: 'left'});
+                        map.addControl(box);
+                        L.control.polylineMeasure().addTo(map);
+                        map.on('click', function () {box.hide();})
+                        box.on('show', function () {console.log('Box will be visible.');});
+                        box.on('shown', function () {console.log('Box is visible.');});
+                        box.on('hide', function () {console.log('Box will be hidden.');});
+                        box.on('hidden', function () {console.log('Box is hidden.');});
+                        L.DomEvent.on(sidebar.getCloseButton(), 'click', function () {console.log('Close button clicked.');});
+                    }
 
-    </head>
-    <body>
-        <h1>1, 2, 3, 4 für alle</h1>
-        <h3>FM</h3>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js" integrity="sha512-SGWgwwRA8xZgEoKiex3UubkSkV1zSE1BS6O4pXcaxcNtUlQsOmOmhVnDwIvqGRfEmuz83tIGL13cXMZn6upPyg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <select name="select station" id="select-station">
-            <option value="-1">Select one of the U-Bahn stations</option>
-            <option value="-1">1 - ALTSTADT-LEHEL - </option>
-            <option value="48.13724, 11.57563">Marienplatz</option>
-            <option value="48.13938, 11.56585">Karlsplatz</option>
-            <option value="48.13356, 11.56711">Sendlinger Tor</option>
-            <option value="48.13988, 11.58683">Lehel</option>
-            <option value="48.14274, 11.57754">Odeonsplatz</option>
-            <option value="-1">2 - LUDWIGSVORSTADT-ISARVORSTADT - </option>
-            <option value="48.14026, 11.56064">München Hauptbahnhof</option>
-            <option value="48.13635, 11.55326">Theresienwiese</option>
-            <option value="48.12958, 11.55845">Goetheplatz</option>
-            <option value="48.12917, 11.57439">Fraunhoferstraße</option>
-            <option value="48.12573, 11.55057">Poccistraße</option>
-            <option value="-1">3 - MAXVORSTADT - </option>
-            <option value="48.15003, 11.54571">Maillingerstraße</option>
-            <option value="48.14507, 11.56337">Königsplatz</option>
-            <option value="48.15113, 11.56418">Theresienstraße</option>
-            <option value="48.15577, 11.56680">Josephsplatz</option>
-            <option value="48.14965, 11.58081">Universität</option>
-            <option value="48.14790, 11.55685">Stiglmaierplatz</option>
-            <option value="-1">4 - SCHWABING-WEST - </option>
-            <option value="48.16218, 11.56867">Hohenzollernplatz</option>
-            <option value="48.16683, 11.57867">Bonner Platz</option>
-            <option value="48.17121, 11.57288">Scheidplatz</option>
-            <option value="48.17553, 11.56641">Petuelring</option>
-        </select>
-
-
-
-        <select name="select housing" id="select-housing">
-            <option value="-1">Select one of the housing options</option>
-            <option value="-1" >1 - ALTSTADT-LEHEL - </option>
-            <option value="48.13724, 11.57563">Marienplatz</option>
-            <option value="48.13938, 11.56585">Karlsplatz</option>
-            <option value="48.13356, 11.56711">Sendlinger Tor</option>
-            <option value="48.13988, 11.58683" >Lehel</option>
-            <option value="48.14274, 11.57754" >Odeonsplatz</option>
-            <option value="-1" >2 - LUDWIGSVORSTADT-ISARVORSTADT - </option>
-            <option value="48.14026, 11.56064" >München Hauptbahnhof</option>
-            <option value="48.13635, 11.55326" >Theresienwiese</option>
-            <option value="48.12958, 11.55845" >Goetheplatz</option>
-            <option value="48.12917, 11.57439" >Fraunhoferstraße</option>
-            <option value="48.12573, 11.55057" >Poccistraße</option>
-            <option value="-1" >3 - MAXVORSTADT - </option>
-            <option value="48.15003, 11.54571" >Maillingerstraße</option>
-            <option value="48.14507, 11.56337" >Königsplatz</option>
-            <option value="48.15113, 11.56418" >Theresienstraße</option>
-            <option value="48.15577, 11.56680" >Josephsplatz</option>
-            <option value="48.14965, 11.58081" >Universität</option>
-            <option value="48.14790, 11.55685" >Stiglmaierplatz</option>
-            <option value="-1" >4 - SCHWABING-WEST - </option>
-            <option value="48.16218, 11.56867" >Hohenzollernplatz</option>
-            <option value="48.16683, 11.57867" >Bonner Platz</option>
-            <option value="48.17121, 11.57288" >Scheidplatz</option>
-            <option value="48.17553, 11.56641" >Petuelring</option>
-        </select>
-
-        
-          <script>
                     function addPoints(data) {
                         data = data.data;
-//                         let pointGroupLayer = L.layerGroup().addTo(map);
                         let markerType = "marker";
-                        for (let row = 0; row < data.length; row++) 
+                        for (let row = 0; row < data.length; row++)
                         {
                             let marker;
                             var icon_url = "https://drive.google.com/uc?export=view&id="+data[row].Image.substring(33,data[row].Image.length);
-                            marker = L.marker([data[row].lat, data[row].lng]).bindPopup("<b>" + data[row].Type + '</b><br>' +data[row].Position + data[row].Scale+"<img src=" + icon_url +" class=ppsize "+ "> " );
-                               marker.addTo(map);
-
+                            marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon}).bindPopup("<b>" + data[row].Type + '</b><br>' +data[row].Position + data[row].Scale+"<img src=" + icon_url +" class=ppsize "+ "> " ,{className: leaflet-popup-content-wrapper});
+                               marker.addTo(map).on('click', function () {box.toggle();});
                     	}
                     }
-                    
+
                     function te(){
                         let pointsURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTh7dQ0JPgZNoagkd77B4S-5xZRpPFHXjXOA5Z7JKNITb4YGw31Pqro_k8Rlo1Gy1D_5YZy7TcvT_li/pub?gid=1170715324&single=true&output=csv";
-                        
+
                         Papa.parse(pointsURL, {download: true,header: true,complete: addPoints,});
                         }
+
+
                 </script>
-                
-                
-        
-        
-    <div class="container-fluid">
-        <div class="row">
-            
-            <div id="map_div" class="col-md-12"> </div>
-            
-            <div id="side-bar" class="col-md-12">
-                <h4>ADD Marker</h4>
-                
+
+
+    <div class="container">
+        <div id="box" class="boxes">
+            <div id="box1">
+                <img src="image/marienp.jpg">
+                <h2>Station: Marienplatz</h2>
+                <p2>text number 1</p2>         
             </div>
-          
+            <br>
+            <div id="box2">
+                <img src="image/work.jpg">
+                <h2>BARRIER</h2>
+                <p2>Construction work on the sidewalk</p2>         
+            </div>
+        </div>
+        <div class="map" id="map">
+
+        </div>
     </div>
-</div>
-<script>
-                    te();
-                      
-            </script>
+   <script>te();</script>
+    <script>boxANm();</script>>
+
+
+    <!-- <div id="map"></div> -->
 </body>
-
-
-<script src="lib/leaflet/leaflet.js"></script>
-<script src="lib/leaflet/jquery-3.5.1.js"></script>
-<!--    plugins-->
-<script src="lib/leaflet/plugins/L.Control.Pan.js"></script>
-<script src="lib/leaflet/plugins/L.Control.Zoomslider.js"></script>
-<script src="lib/leaflet/plugins/L.Control.MousePosition.js"></script>
-<script src="lib/leaflet/plugins/Leaflet.PolylineMeasure.js"></script>
-<script src="lib/leaflet/plugins/easy-button.js"></script>
-<script src="lib/leaflet/plugins/L.Control.Sidebar.js"></script>
-
-<!--    plugins-->
-        
-<script src="js/source_code.js"></script>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+ integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+ crossorigin=""></script>
+<script src="map.js"></script>
+<script src="Leaflet.PolylineMeasure.js"></script>
+<script src="https://ppete2.github.io/Leaflet.PolylineMeasure/Leaflet.PolylineMeasure.js"></script>
+<script src="L.Control.Sidebar.js"></script>
 
 
 </html>

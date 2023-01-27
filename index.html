@@ -15,6 +15,12 @@
     <style>
 .ppsize {    max-width: 100%;
     max-height: 100%;}
+.leaflet-popup-content-wrapper{
+    background-color: #000;
+    color: white;
+    border: 3px solid orange;
+    border-radius: 5px;
+}
 </style>
     <title>Mapping Project</title>
 </head>
@@ -107,10 +113,7 @@
                                 iconAnchor:   [0,0], // point of the icon which will correspond to marker's location
                                 popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
                             });
-                            document.write("maker css");
-                            marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon});
-//                             .bindPopup("<b>" + data[row].Type + '</b><br>' +data[row].Position + data[row].Scale+"<img src=" + icon_url +" class=ppsize "+ "> " ,{className: leaflet-popup-content-wrapper});
-                            document.write("L maker");
+                            marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon}).bindPopup("<b>" + data[row].Type + '</b><br>' +data[row].Position + data[row].Scale+"<img src=" + icon_url +" class=ppsize "+ "> " ,{className: leaflet-popup-content-wrapper});
                             marker.addTo(map);
 //                             .on('click', function () {box.toggle();})
                     	}

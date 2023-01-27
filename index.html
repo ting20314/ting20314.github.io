@@ -106,8 +106,10 @@
 // //                             .bindPopup("<b>" + data[row].Type + '</b><br>' +
 // //          (point['Image'] ? ('<img src="' + data[row].Image + '"><br>') : '') +
 // //          data[row].Position + data[row].Scale)
-                            document.write(data[row].Image.substring(32,data[row].Image.length()));
-                            document.write("    "+data[row].Image.substring(32,data[row].Image.length())+ "         ");
+                            document.write(data[row].Image);
+                            var UR=data[row].Image;
+                            document.write("How many:"+UR.length());
+//                             document.write("    "+data[row].Image.substring(32,data[row].Image.length())+ "         ");
                     	}
                     }
                     

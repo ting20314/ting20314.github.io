@@ -95,9 +95,21 @@
             <div id="side-bar" class="col-md-12">
                 <h4>ADD Marker</h4>
                 <script>
-document.write(data[row].lat);
-</script>
-
+                    function te(){
+                        pointsURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTh7dQ0JPgZNoagkd77B4S-5xZRpPFHXjXOA5Z7JKNITb4YGw31Pqro_k8Rlo1Gy1D_5YZy7TcvT_li/pub?gid=1170715324&single=true&output=csv";
+                        Papa.parse(pointsURL, {download: true,header: true,complete: addPoints,});}
+                </sccript>
+                <script>
+                    function addPoints(data) {
+                        data = data.data;
+                        let pointGroupLayer = L.layerGroup().addTo(map);
+                        let markerType = "marker";
+                        for (let row = 0; row < data.length; row++) {
+                            let marker;
+                                document.write(data[row].lat);
+                                document.write(data[row].lng);
+                    }
+                </script>
         </div>
     </div>
 </div>

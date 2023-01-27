@@ -31,7 +31,7 @@
     </head>
     <body>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js" integrity="sha512-SGWgwwRA8xZgEoKiex3UubkSkV1zSE1BS6O4pXcaxcNtUlQsOmOmhVnDwIvqGRfEmuz83tIGL13cXMZn6upPyg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <h1>1, 2, 3, 4 für alle</h1>
-        <h2>huhKKlloo</h2>
+        <h2>huhKKllOOo</h2>
         <select name="select station" id="select-station">
             <option value="-1">Select one of the U-Bahn stations</option>
             <option value="-1">1 - ALTSTADT-LEHEL - </option>
@@ -99,17 +99,18 @@
                         for (let row = 0; row < data.length; row++) 
                         {
                             let marker;
-                            marker = L.marker([data[row].lat, data[row].lng]).bindPopup("<b>" + data[row].Type + '</b><br>' +
-         (point['Image'] ? ('<img src="' + data[row].Image + '"><br>') : '') +
-         data[row].Position + data[row].Scale);
-                               marker.addTo(map_div);
+                            marker = L.marker([data[row].lat, data[row].lng]);
+                               marker.addTo(map);
+//                             .bindPopup("<b>" + data[row].Type + '</b><br>' +
+//          (point['Image'] ? ('<img src="' + data[row].Image + '"><br>') : '') +
+//          data[row].Position + data[row].Scale)
 //                             document.write(data[row].lat);
                     	}
                     }
                     
                     function te(){
                         let pointsURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTh7dQ0JPgZNoagkd77B4S-5xZRpPFHXjXOA5Z7JKNITb4YGw31Pqro_k8Rlo1Gy1D_5YZy7TcvT_li/pub?gid=1170715324&single=true&output=csv";
-                        document.write(pointsURL);
+                        
                         Papa.parse(pointsURL, {download: true,header: true,complete: addPoints,});
                         }
                 </script>
@@ -119,16 +120,16 @@
         
     <div class="container-fluid">
         <div class="row">
-            <script>
+            
+            <div id="map_div" class="col-md-12"> </div>
+            
+            <div id="side-bar" class="col-md-12">
+                <h4>ADD Marker</h4>
+            </div>
+          <script>
                     te();
                       
             </script>
-            <div id="map_div" class="col-md-12"> </div>
-            <div id="side-bar" class="col-md-12">
-                <h4>ADD Marker</h4>
-                
-            </div>
-          
     </div>
 </div>
 

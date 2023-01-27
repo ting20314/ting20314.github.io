@@ -109,7 +109,7 @@
                     }
                     
                     function te(){
-                        let pointsURL = 123;
+                        let pointsURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTh7dQ0JPgZNoagkd77B4S-5xZRpPFHXjXOA5Z7JKNITb4YGw31Pqro_k8Rlo1Gy1D_5YZy7TcvT_li/pub?gid=1170715324&single=true&output=csv";
                         document.write(pointsURL);
                         Papa.parse(pointsURL, {download: true,header: true,complete: addPoints,});
                         }

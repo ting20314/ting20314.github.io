@@ -100,6 +100,7 @@
                         for (let row = 0; row < data.length; row++)
                         {
                             document.write(row);
+                            document.write(data[row].lat,",",data[row].lng);
                             let marker;
                             var icon_url = "https://drive.google.com/uc?export=view&id="+data[row].Image.substring(33,data[row].Image.length);
                             marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon}).bindPopup("<b>" + data[row].Type + '</b><br>' +data[row].Position + data[row].Scale+"<img src=" + icon_url +" class=ppsize "+ "> " ,{className: leaflet-popup-content-wrapper});

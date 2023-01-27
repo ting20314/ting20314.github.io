@@ -32,7 +32,7 @@
     <body>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js" integrity="sha512-SGWgwwRA8xZgEoKiex3UubkSkV1zSE1BS6O4pXcaxcNtUlQsOmOmhVnDwIvqGRfEmuz83tIGL13cXMZn6upPyg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <h1>1, 2, 3, 4 für alle</h1>
-        <h2>huh</h2>
+        <h2>huhhhh</h2>
         <select name="select station" id="select-station">
             <option value="-1">Select one of the U-Bahn stations</option>
             <option value="-1">1 - ALTSTADT-LEHEL - </option>
@@ -107,8 +107,11 @@
                             let marker;
                             let URL= data[row].Image;
                             marker = L.marker([data[row].lat, data[row].lng]).bindPopup("<b>" + data[row].Type + '</b><br>' +
-         <img src= "URL"><br> +
+         (point['Image'] ? ('<img src="' + URL + '"><br>') : '') +
          data[row].Position + data[row].Scale);
+
+var
+
                             marker.addTo(map);
                     	}
                     }

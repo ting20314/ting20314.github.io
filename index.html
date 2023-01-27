@@ -32,7 +32,7 @@
     <body>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js" integrity="sha512-SGWgwwRA8xZgEoKiex3UubkSkV1zSE1BS6O4pXcaxcNtUlQsOmOmhVnDwIvqGRfEmuz83tIGL13cXMZn6upPyg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <h1>1, 2, 3, 4 für alle</h1>
-        <h2>ttT</h2>
+        <h2>ttTww</h2>
         <select name="select station" id="select-station">
             <option value="-1">Select one of the U-Bahn stations</option>
             <option value="-1">1 - ALTSTADT-LEHEL - </option>
@@ -97,17 +97,17 @@
             <div id="side-bar" class="col-md-12">
                 <h4>ADD Marker</h4>
                 <script>
-//                     function addPoints(data) {
-//                         data = data.data;
-//                         let pointGroupLayer = L.layerGroup().addTo(map);
-//                         let markerType = "marker";
-//                         for (let row = 0; row < data.length; row++) 
-//                         {
-//                             let marker;
-//                                 document.write(data[row].lat);
-//                                 document.write(data[row].lng);
-//                     	}
-//                     }
+                    function addPoints(data) {
+                        data = data.data;
+                        let pointGroupLayer = L.layerGroup().addTo(map);
+                        let markerType = "marker";
+                        for (let row = 0; row < data.length; row++) 
+                        {
+                            let marker;
+                                document.write(data[row].lat);
+                                document.write(data[row].lng);
+                    	}
+                    }
                     
                     function te(){
                         let pointsURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTh7dQ0JPgZNoagkd77B4S-5xZRpPFHXjXOA5Z7JKNITb4YGw31Pqro_k8Rlo1Gy1D_5YZy7TcvT_li/pub?gid=1170715324&single=true&output=csv";

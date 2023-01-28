@@ -91,17 +91,6 @@
     <!--Google Sheet-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js" integrity="sha512-SGWgwwRA8xZgEoKiex3UubkSkV1zSE1BS6O4pXcaxcNtUlQsOmOmhVnDwIvqGRfEmuz83tIGL13cXMZn6upPyg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-
-//                     var box = L.control.sidebar('box', { closeButton: true,position: 'left'});
-//                     map.addControl(box);
-// //                     L.control.polylineMeasure().addTo(map);
-                    map.on('click', function () {box.hide();})
-//                     box.on('show', function () {console.log('Box will be visible.');});
-//                     box.on('shown', function () {console.log('Box is visible.');});
-//                     box.on('hide', function () {console.log('Box will be hidden.');});
-//                     box.on('hidden', function () {console.log('Box is hidden.');});
-//                     L.DomEvent.on(sidebar.getCloseButton(), 'click', function () {console.log('Close button clicked.');});
-
                     function addPoints(data) {
                         data = data.data;
                         let markerType = "marker";
@@ -117,7 +106,6 @@
                             });
                             marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon});
                             marker.addTo(map);
-                            
                             marker.bindPopup("<b>" + data[row].Type + '</b><br>' +data[row].Position +'</b><br>'+ data[row].Scale+"<img src="+ icon_url +" class=ppsize"+ ">" ,{className: "leaflet-popup-content-wrapper"});
                             function onClick(e) {
                                var popup = e.target.getPopup();
@@ -142,7 +130,7 @@
 
 
     <div class="container">
-        <div id="box" class="boxes">
+        <div id="side-bar" class="boxes">
             <div id="box1">
                 <img src="image/marienp.jpg">
                 <h2>Station: Marienplatz</h2>

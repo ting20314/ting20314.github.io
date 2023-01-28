@@ -90,17 +90,16 @@
     </select>
     <!--Google Sheet-->
     <script>
-//                     function boxANm(){
-//                         var box = L.control.sidebar('box', { closeButton: true,position: 'left'});
-//                         map.addControl(box);
-//                         L.control.polylineMeasure().addTo(map);
-//                         map.on('click', function () {box.hide();})
-//                         box.on('show', function () {console.log('Box will be visible.');});
-//                         box.on('shown', function () {console.log('Box is visible.');});
-//                         box.on('hide', function () {console.log('Box will be hidden.');});
-//                         box.on('hidden', function () {console.log('Box is hidden.');});
-//                         L.DomEvent.on(sidebar.getCloseButton(), 'click', function () {console.log('Close button clicked.');});
-//                     }
+
+                    var box = L.control.sidebar('box', { closeButton: true,position: 'left'});
+                    map.addControl(box);
+//                     L.control.polylineMeasure().addTo(map);
+                    map.on('click', function () {box.hide();})
+//                     box.on('show', function () {console.log('Box will be visible.');});
+//                     box.on('shown', function () {console.log('Box is visible.');});
+//                     box.on('hide', function () {console.log('Box will be hidden.');});
+//                     box.on('hidden', function () {console.log('Box is hidden.');});
+//                     L.DomEvent.on(sidebar.getCloseButton(), 'click', function () {console.log('Close button clicked.');});
 
                     function addPoints(data) {
                         data = data.data;

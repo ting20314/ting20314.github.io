@@ -75,21 +75,14 @@ var popAlert = L.popup({
 
 
 
-// var sidebar = L.control.sidebar('side-bar', { closeButton: true});
-// map.addControl(box);
-var sidebar = L.control.sidebar('side-bar').addTo(map);
 
 
 
-L.marker([48.13724, 11.57563], {icon: UbahnIcon}).addTo(map).bindPopup("<b>Marienplatz</b><br>Elevators: 4/4</b><br>Escalators: 26/28</b><br>Service Point: AVAILABLE</b><br>Barrier-free WC: AVAILABLE")
-.on('click', function(){sidebar.toggle();sidebar.setContent("MARIEN").show();}); //Marienplatz
-// .on('click', function(){box.setContent("<b>Marienplatz</b><br>Elevators: 4/4</b><br>Escalators: 26/28</b><br>Service Point: AVAILABLE</b><br>Barrier-free WC: AVAILABLE").show();
-L.marker([48.13938, 11.56585], {icon: UbahnIcon}).addTo(map).bindPopup("<b>Hello world!</b><br>I am a popup.")
-});//Karlsplatz
-// .on('click', function(){box.setContent("<b>Marienplatz</b><br>Elevators: 4/4</b><br>Escalators: 26/28</b><br>Service Point: AVAILABLE</b><br>Barrier-free WC: AVAILABLE").show();
-L.marker([48.13356, 11.56711], {icon: UbahnIcon}).addTo(map)
-}); //Sendlinger Tor
-// .on('click', function(){box.setContent('<b>Marienplatz</b><br>Elevators: 4/4</b><br>Escalators: 26/28</b><br>Service Point: AVAILABLE</b><br>Barrier-free WC: AVAILABLE').show();
+
+
+L.marker([48.13724, 11.57563], {icon: UbahnIcon}).addTo(map).bindPopup("<b>Marienplatz</b><br>Elevators: 4/4</b><br>Escalators: 26/28</b><br>Service Point: AVAILABLE</b><br>Barrier-free WC: AVAILABLE"); //Marienplatz
+L.marker([48.13938, 11.56585], {icon: UbahnIcon}).addTo(map).bindPopup("<b>Hello world!</b><br>I am a popup.");//Karlsplatz
+L.marker([48.13356, 11.56711], {icon: UbahnIcon}).addTo(map); //Sendlinger Tor
 L.marker([48.13988, 11.58683], {icon: UbahnIcon}).addTo(map); //Lehel
 L.marker([48.14274, 11.57754], {icon: UbahnIcon}).addTo(map); //Odeonsplatz
 
@@ -115,14 +108,10 @@ L.marker([48.17553, 11.56641], {icon: UbahnIcon}).addTo(map); //Petuelring
 
 //HOUSING
 
-L.marker([48.136273, 11.572853], {icon: HousingIcon}).addTo(map).bindPopup("<b>Hello world!</b><br>I am a popup.").on('click', function(){box.setContent('Null Island').show();
-});
-L.marker([48.155198, 11.565252], {icon: HousingIcon}).addTo(map).bindPopup("<b>Hello world!</b><br>I am a popup.").on('click', function(){box.setContent('Null Island').show();
-});
-L.marker([48.139908, 11.591901], {icon: HousingIcon}).addTo(map).bindPopup("<b>Hello world!</b><br>I am a popup.").on('click', function(){box.setContent('Null Island').show();
-});
-L.marker([48.138732, 11.590591], {icon: HousingIcon}).addTo(map).bindPopup("<b>Hello world!</b><br>I am a popup.").on('click', function(){box.setContent('Null Island').show();
-});
+L.marker([48.136273, 11.572853], {icon: HousingIcon}).addTo(map).bindPopup("<b>Hello world!</b><br>I am a popup.");
+L.marker([48.155198, 11.565252], {icon: HousingIcon}).addTo(map).bindPopup("<b>Hello world!</b><br>I am a popup.");
+L.marker([48.139908, 11.591901], {icon: HousingIcon}).addTo(map).bindPopup("<b>Hello world!</b><br>I am a popup.");
+L.marker([48.138732, 11.590591], {icon: HousingIcon}).addTo(map).bindPopup("<b>Hello world!</b><br>I am a popup.");
 L.marker([48.137871, 11.559438], {icon: HousingIcon}).addTo(map).bindPopup("<b>Hello world!</b><br>I am a popup.");//1
 L.marker([48.137871, 11.559438], {icon: HousingIcon}).addTo(map).bindPopup("<b>Hello world!</b><br>I am a popup.");//2
 L.marker([48.137871, 11.559438], {icon: HousingIcon}).addTo(map).bindPopup("<b>Hello world!</b><br>I am a popup.");//3

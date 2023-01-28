@@ -75,7 +75,7 @@ var popAlert = L.popup({
 
 
 
-var box = L.control.sidebar('box');
+var box = L.control.sidebar('box', { closeButton: true,position: 'left'});
 map.addControl(box);
 
 

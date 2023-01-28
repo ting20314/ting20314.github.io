@@ -38,13 +38,13 @@ p {
 }
 @media (min-width: 1200px) {
     .col-xl-12 {
-        -webkit-box-flex: 0;
+/*         -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
         flex: 0 0 100%;
         max-width: 100%;
         
         gap: 10px;
-        padding: 10px;
+        padding: 10px; */
         background-color:orange;
         font-size: 20px;
         

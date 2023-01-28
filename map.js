@@ -75,18 +75,21 @@ var popAlert = L.popup({
 
 
 
-var box = L.control.sidebar('box', { closeButton: true, class: 'boxes'});
-map.addControl(box);
+// var side-bar = L.control.sidebar('box', { closeButton: true, class: 'boxes'});
+// map.addControl(box);
 
 
 
 
-L.marker([48.13724, 11.57563], {icon: UbahnIcon}).addTo(map).bindPopup("<b>Marienplatz</b><br>Elevators: 4/4</b><br>Escalators: 26/28</b><br>Service Point: AVAILABLE</b><br>Barrier-free WC: AVAILABLE").on('click', function(){box.setContent("<b>Marienplatz</b><br>Elevators: 4/4</b><br>Escalators: 26/28</b><br>Service Point: AVAILABLE</b><br>Barrier-free WC: AVAILABLE").show();
+L.marker([48.13724, 11.57563], {icon: UbahnIcon}).addTo(map).bindPopup("<b>Marienplatz</b><br>Elevators: 4/4</b><br>Escalators: 26/28</b><br>Service Point: AVAILABLE</b><br>Barrier-free WC: AVAILABLE")
 }); //Marienplatz
-L.marker([48.13938, 11.56585], {icon: UbahnIcon}).addTo(map).bindPopup("<b>Hello world!</b><br>I am a popup.").on('click', function(){box.setContent("<b>Marienplatz</b><br>Elevators: 4/4</b><br>Escalators: 26/28</b><br>Service Point: AVAILABLE</b><br>Barrier-free WC: AVAILABLE").show();
+// .on('click', function(){box.setContent("<b>Marienplatz</b><br>Elevators: 4/4</b><br>Escalators: 26/28</b><br>Service Point: AVAILABLE</b><br>Barrier-free WC: AVAILABLE").show();
+L.marker([48.13938, 11.56585], {icon: UbahnIcon}).addTo(map).bindPopup("<b>Hello world!</b><br>I am a popup.")
 });//Karlsplatz
-L.marker([48.13356, 11.56711], {icon: UbahnIcon}).addTo(map).on('click', function(){box.setContent('<b>Marienplatz</b><br>Elevators: 4/4</b><br>Escalators: 26/28</b><br>Service Point: AVAILABLE</b><br>Barrier-free WC: AVAILABLE').show();
+// .on('click', function(){box.setContent("<b>Marienplatz</b><br>Elevators: 4/4</b><br>Escalators: 26/28</b><br>Service Point: AVAILABLE</b><br>Barrier-free WC: AVAILABLE").show();
+L.marker([48.13356, 11.56711], {icon: UbahnIcon}).addTo(map)
 }); //Sendlinger Tor
+// .on('click', function(){box.setContent('<b>Marienplatz</b><br>Elevators: 4/4</b><br>Escalators: 26/28</b><br>Service Point: AVAILABLE</b><br>Barrier-free WC: AVAILABLE').show();
 L.marker([48.13988, 11.58683], {icon: UbahnIcon}).addTo(map); //Lehel
 L.marker([48.14274, 11.57754], {icon: UbahnIcon}).addTo(map); //Odeonsplatz
 

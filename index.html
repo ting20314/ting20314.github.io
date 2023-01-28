@@ -13,26 +13,15 @@
     <link rel="stylesheet" href="https://ppete2.github.io/Leaflet.PolylineMeasure/Leaflet.PolylineMeasure.css" />
     <link rel="stylesheet" href="L.Control.Sidebar.css">
     <style>
-.ppsize {    max-width: 80%;
-    max-height: 80%;}
-/* .leaflet-popup-content-wrapper{
-    background-color: #000;
-    color: white;
-    border: 3px solid orange;
-    border-radius: 5px;
-    width : 350px;
-    height: 350px;
-}
-.row{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin-right:-15px;margin-left:-15px} */
+.ppsize {    max-width: 100%;
+    max-height: 100%;}
 </style>
     <title>Mapping Project</title>
-    
 </head>
 <body>
-    
     <h1>1, 2, 3, 4 für alle</h1>
-    <h3>MMNNggjjKKll</h3>
     <p>Insert description of the project<br>This website is about this</p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js" integrity="sha512-SGWgwwRA8xZgEoKiex3UubkSkV1zSE1BS6O4pXcaxcNtUlQsOmOmhVnDwIvqGRfEmuz83tIGL13cXMZn6upPyg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <select name="select station" id="select-station">
         <option value="48.14843,11.57549">Select one of the U-Bahn stations</option>
         <option value="-1">1 - ALTSTADT-LEHEL - </option>
@@ -90,10 +79,20 @@
         <option value="48.17121, 11.57288">Scheidplatz</option>
         <option value="48.17553, 11.56641">Petuelring</option>
     </select>
-    
     <!--Google Sheet-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js" integrity="sha512-SGWgwwRA8xZgEoKiex3UubkSkV1zSE1BS6O4pXcaxcNtUlQsOmOmhVnDwIvqGRfEmuz83tIGL13cXMZn6upPyg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
+                    function boxANm(){
+                        var box = L.control.sidebar('box', { closeButton: true,position: 'left'});
+                        map.addControl(box);
+                        L.control.polylineMeasure().addTo(map);
+                        map.on('click', function () {box.hide();})
+                        box.on('show', function () {console.log('Box will be visible.');});
+                        box.on('shown', function () {console.log('Box is visible.');});
+                        box.on('hide', function () {console.log('Box will be hidden.');});
+                        box.on('hidden', function () {console.log('Box is hidden.');});
+                        L.DomEvent.on(sidebar.getCloseButton(), 'click', function () {console.log('Close button clicked.');});
+                    }
+
                     function addPoints(data) {
                         data = data.data;
                         let markerType = "marker";
@@ -101,31 +100,15 @@
                         {
                             let marker;
                             var icon_url = "https://drive.google.com/uc?export=view&id="+data[row].Image.substring(33,data[row].Image.length);
-                            var AlertIcon = L.icon({
-                                iconUrl: 'image/alert3.png',
-                                iconSize:     [30, 30], // size of the icon
-                                iconAnchor:   [0,0], // point of the icon which will correspond to marker's location
-                                popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
-                            });
-                            marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon});
-                            marker.addTo(map);
-                            marker.bindPopup("<b>" + data[row].Type + '</b><br>' +data[row].Position +'</b><br>'+ data[row].Scale+"<img src="+ icon_url +" class=ppsize"+ ">" ,{className: "leaflet-popup-content-wrapper"});
-                            function onClick(e) {
-                               var popup = e.target.getPopup();
-                               var content = popup.getContent();
-                               console.log(content);
-                            }
-                            marker.on('click', onClick);
-                            
-                         
+                            marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon}).bindPopup("<b>" + data[row].Type + '</b><br>' +data[row].Position + data[row].Scale+"<img src=" + icon_url +" class=ppsize "+ "> " ,{className: leaflet-popup-content-wrapper});
+                               marker.addTo(map).on('click', function () {box.toggle();});
                     	}
                     }
 
                     function te(){
                         let pointsURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTh7dQ0JPgZNoagkd77B4S-5xZRpPFHXjXOA5Z7JKNITb4YGw31Pqro_k8Rlo1Gy1D_5YZy7TcvT_li/pub?gid=1170715324&single=true&output=csv";
-                        
+
                         Papa.parse(pointsURL, {download: true,header: true,complete: addPoints,});
-                        
                         }
 
 
@@ -133,7 +116,7 @@
 
 
     <div class="container">
-        <div id="side-bar" class="boxes">
+        <div id="box" class="boxes">
             <div id="box1">
                 <img src="image/marienp.jpg">
                 <h2>Station: Marienplatz</h2>
@@ -151,7 +134,7 @@
         </div>
     </div>
    <script>te();</script>
-<!--     <script>boxANm();</script>> -->
+    <script>boxANm();</script>>
 
 
     <!-- <div id="map"></div> -->
@@ -160,12 +143,10 @@
  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
  integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
  crossorigin=""></script>
- <script src="L.Control.Sidebar.js"></script>
- <script src="Leaflet.PolylineMeasure.js"></script>
-<script src="https://ppete2.github.io/Leaflet.PolylineMeasure/Leaflet.PolylineMeasure.js"></script>
 <script src="map.js"></script>
-
-
+<script src="Leaflet.PolylineMeasure.js"></script>
+<script src="https://ppete2.github.io/Leaflet.PolylineMeasure/Leaflet.PolylineMeasure.js"></script>
+<script src="L.Control.Sidebar.js"></script>
 
 
 </html>

@@ -75,14 +75,14 @@ var popAlert = L.popup({
 
 
 
-// var side-bar = L.control.sidebar('box', { closeButton: true, class: 'boxes'});
+// var sidebar = L.control.sidebar('side-bar', { closeButton: true});
 // map.addControl(box);
-
+var sidebar = L.control.sidebar('side-bar').addTo(map);
 
 
 
 L.marker([48.13724, 11.57563], {icon: UbahnIcon}).addTo(map).bindPopup("<b>Marienplatz</b><br>Elevators: 4/4</b><br>Escalators: 26/28</b><br>Service Point: AVAILABLE</b><br>Barrier-free WC: AVAILABLE")
-}); //Marienplatz
+.on('click', function(){sidebar.toggle();sidebar.setContent("MARIEN").show();}); //Marienplatz
 // .on('click', function(){box.setContent("<b>Marienplatz</b><br>Elevators: 4/4</b><br>Escalators: 26/28</b><br>Service Point: AVAILABLE</b><br>Barrier-free WC: AVAILABLE").show();
 L.marker([48.13938, 11.56585], {icon: UbahnIcon}).addTo(map).bindPopup("<b>Hello world!</b><br>I am a popup.")
 });//Karlsplatz

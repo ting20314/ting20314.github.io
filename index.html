@@ -25,12 +25,9 @@
 }
 </style>
     <title>Mapping Project</title>
-</head>
-<body>
     <h1>1, 2, 3, 4 für alle</h1>
-    <h3>bb</h3>
+    <h3>bbLL</h3>
     <p>Insert description of the project<br>This website is about this</p>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js" integrity="sha512-SGWgwwRA8xZgEoKiex3UubkSkV1zSE1BS6O4pXcaxcNtUlQsOmOmhVnDwIvqGRfEmuz83tIGL13cXMZn6upPyg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <select name="select station" id="select-station">
         <option value="48.14843,11.57549">Select one of the U-Bahn stations</option>
         <option value="-1">1 - ALTSTADT-LEHEL - </option>
@@ -88,12 +85,16 @@
         <option value="48.17121, 11.57288">Scheidplatz</option>
         <option value="48.17553, 11.56641">Petuelring</option>
     </select>
+</head>
+<body>
+    
     <!--Google Sheet-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js" integrity="sha512-SGWgwwRA8xZgEoKiex3UubkSkV1zSE1BS6O4pXcaxcNtUlQsOmOmhVnDwIvqGRfEmuz83tIGL13cXMZn6upPyg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
 
-                    var box = L.control.sidebar('box', { closeButton: true,position: 'left'});
-                    map.addControl(box);
-//                     L.control.polylineMeasure().addTo(map);
+//                     var box = L.control.sidebar('box', { closeButton: true,position: 'left'});
+//                     map.addControl(box);
+// //                     L.control.polylineMeasure().addTo(map);
                     map.on('click', function () {box.hide();})
 //                     box.on('show', function () {console.log('Box will be visible.');});
 //                     box.on('shown', function () {console.log('Box is visible.');});

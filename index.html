@@ -20,6 +20,7 @@
     color: white;
     border: 3px solid orange;
     border-radius: 5px;
+    maxWidth : 450;
 }
 </style>
     <title>Mapping Project</title>
@@ -88,17 +89,17 @@
     </select>
     <!--Google Sheet-->
     <script>
-//                     function boxANm(){
-//                         var box = L.control.sidebar('box', { closeButton: true,position: 'left'});
-//                         map.addControl(box);
-//                         L.control.polylineMeasure().addTo(map);
-//                         map.on('click', function () {box.hide();})
-//                         box.on('show', function () {console.log('Box will be visible.');});
-//                         box.on('shown', function () {console.log('Box is visible.');});
-//                         box.on('hide', function () {console.log('Box will be hidden.');});
-//                         box.on('hidden', function () {console.log('Box is hidden.');});
-//                         L.DomEvent.on(sidebar.getCloseButton(), 'click', function () {console.log('Close button clicked.');});
-//                     }
+                    function boxANm(){
+                        var box = L.control.sidebar('box', { closeButton: true,position: 'left'});
+                        map.addControl(box);
+                        L.control.polylineMeasure().addTo(map);
+                        map.on('click', function () {box.hide();})
+                        box.on('show', function () {console.log('Box will be visible.');});
+                        box.on('shown', function () {console.log('Box is visible.');});
+                        box.on('hide', function () {console.log('Box will be hidden.');});
+                        box.on('hidden', function () {console.log('Box is hidden.');});
+                        L.DomEvent.on(sidebar.getCloseButton(), 'click', function () {console.log('Close button clicked.');});
+                    }
 
                     function addPoints(data) {
                         data = data.data;
@@ -124,10 +125,7 @@
                             }
                             marker.on('click', onClick);
                             
-                            
-//                                 .bindPopup();
-                            
-//                             .on('click', function () {box.toggle();})
+                         
                     	}
                     }
 

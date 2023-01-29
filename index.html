@@ -89,17 +89,17 @@
 
         
         <script>
-            document.write("BEFORE");
             function addPoints(data) {
                 data = data.data;
                 let markerType = "marker";
-                document.write("sdsds");
                 for (let row = 0; row < data.length; row++)
                 {
+                    document.write("row:",row);
                     let marker;
                     var icon_url = "https://drive.google.com/uc?export=view&id="+data[row].Image.substring(33,data[row].Image.length);
                     document.write(data[row].Type);    
                     marker = L.marker([data[row].lat, data[row].lng]);
+                    document.write("After Marker");
                     marker.addTo(map_div);
                 }
             }

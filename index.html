@@ -1,0 +1,139 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Mapping Project</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="lib/leaflet/leaflet.css">
+        <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+        <!--    plugins-->
+        <link rel="stylesheet" href="lib/leaflet/plugins/L.Control.Pan.css">
+        <link rel="stylesheet" href="lib/leaflet/plugins/L.Control.Zoomslider.css">
+        <link rel="stylesheet" href="lib/leaflet/plugins/L.Control.MousePosition.css">
+        <link rel="stylesheet" href="lib/leaflet/plugins/Leaflet.PolylineMeasure.css">
+        <link rel="stylesheet" href="lib/leaflet/plugins/easy-button.css">
+        <link rel="stylesheet" href="lib/leaflet/plugins/L.Control.Sidebar.css">
+        <!-- sheet-->
+                <link rel="stylesheet" href="lib/leaflet/plugins/font-awesome.min.css"/>
+        <link rel="stylesheet" href="lib/leaflet/plugins/leaflet.awesome-markers.css"/>
+        <!--    plugins-->
+
+        <link rel="stylesheet" href="css/style.css">
+
+
+
+
+
+    </head>
+    <body>
+    <h1>1, 2, 3, 4 für alle</h1>
+        <select name="select station" id="select-station">
+            <option value="-1">Select one of the U-Bahn stations</option>
+            <option value="-1">1 - ALTSTADT-LEHEL - </option>
+            <option value="48.13724, 11.57563">Marienplatz</option>
+            <option value="48.13938, 11.56585">Karlsplatz</option>
+            <option value="48.13356, 11.56711">Sendlinger Tor</option>
+            <option value="48.13988, 11.58683">Lehel</option>
+            <option value="48.14274, 11.57754">Odeonsplatz</option>
+            <option value="-1">2 - LUDWIGSVORSTADT-ISARVORSTADT - </option>
+            <option value="48.14026, 11.56064">München Hauptbahnhof</option>
+            <option value="48.13635, 11.55326">Theresienwiese</option>
+            <option value="48.12958, 11.55845">Goetheplatz</option>
+            <option value="48.12917, 11.57439">Fraunhoferstraße</option>
+            <option value="48.12573, 11.55057">Poccistraße</option>
+            <option value="-1">3 - MAXVORSTADT - </option>
+            <option value="48.15003, 11.54571">Maillingerstraße</option>
+            <option value="48.14507, 11.56337">Königsplatz</option>
+            <option value="48.15113, 11.56418">Theresienstraße</option>
+            <option value="48.15577, 11.56680">Josephsplatz</option>
+            <option value="48.14965, 11.58081">Universität</option>
+            <option value="48.14790, 11.55685">Stiglmaierplatz</option>
+            <option value="-1">4 - SCHWABING-WEST - </option>
+            <option value="48.16218, 11.56867">Hohenzollernplatz</option>
+            <option value="48.16683, 11.57867">Bonner Platz</option>
+            <option value="48.17121, 11.57288">Scheidplatz</option>
+            <option value="48.17553, 11.56641">Petuelring</option>
+        </select>
+
+
+
+        <select name="select housing" id="select-housing">
+            <option value="-1">Select one of the housing options</option>
+            <option value="-1" >1 - ALTSTADT-LEHEL - </option>
+            <option value="48.13724, 11.57563">Marienplatz</option>
+            <option value="48.13938, 11.56585">Karlsplatz</option>
+            <option value="48.13356, 11.56711">Sendlinger Tor</option>
+            <option value="48.13988, 11.58683" >Lehel</option>
+            <option value="48.14274, 11.57754" >Odeonsplatz</option>
+            <option value="-1" >2 - LUDWIGSVORSTADT-ISARVORSTADT - </option>
+            <option value="48.14026, 11.56064" >München Hauptbahnhof</option>
+            <option value="48.13635, 11.55326" >Theresienwiese</option>
+            <option value="48.12958, 11.55845" >Goetheplatz</option>
+            <option value="48.12917, 11.57439" >Fraunhoferstraße</option>
+            <option value="48.12573, 11.55057" >Poccistraße</option>
+            <option value="-1" >3 - MAXVORSTADT - </option>
+            <option value="48.15003, 11.54571" >Maillingerstraße</option>
+            <option value="48.14507, 11.56337" >Königsplatz</option>
+            <option value="48.15113, 11.56418" >Theresienstraße</option>
+            <option value="48.15577, 11.56680" >Josephsplatz</option>
+            <option value="48.14965, 11.58081" >Universität</option>
+            <option value="48.14790, 11.55685" >Stiglmaierplatz</option>
+            <option value="-1" >4 - SCHWABING-WEST - </option>
+            <option value="48.16218, 11.56867" >Hohenzollernplatz</option>
+            <option value="48.16683, 11.57867" >Bonner Platz</option>
+            <option value="48.17121, 11.57288" >Scheidplatz</option>
+            <option value="48.17553, 11.56641" >Petuelring</option>
+        </select>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div id="map_div" class="col-md-12"> </div>
+            <div id="side-bar" class="col-md-12">
+                <h4>ADD Marker</h4>
+
+        </div>
+    </div>
+</div>
+
+<script>
+                    function addPoints(data) {
+                        data = data.data;
+                        let markerType = "marker";
+                        for (let row = 0; row < data.length; row++)
+                        {
+                            let marker;
+                            var icon_url = "https://drive.google.com/uc?export=view&id="+data[row].Image.substring(33,data[row].Image.length);
+                            marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon}).bindPopup("<b>" + data[row].Type + '</b><br>' +data[row].Position + data[row].Scale+"<img src=" + icon_url +" class=ppsize "+ "> " );
+                               marker.addTo(map);
+
+                    	}
+                    }
+
+                    function te(){
+                        let pointsURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTh7dQ0JPgZNoagkd77B4S-5xZRpPFHXjXOA5Z7JKNITb4YGw31Pqro_k8Rlo1Gy1D_5YZy7TcvT_li/pub?gid=1170715324&single=true&output=csv";
+                        Papa.parse(pointsURL, {download: true,header: true,complete: addPoints,});
+                        }
+                </script>
+    <script>te();</script>
+
+</body>
+
+
+<script src="lib/leaflet/leaflet.js"></script>
+<script src="lib/leaflet/jquery-3.5.1.js"></script>
+<!--    plugins-->
+<script src="lib/leaflet/plugins/L.Control.Pan.js"></script>
+<script src="lib/leaflet/plugins/L.Control.Zoomslider.js"></script>
+<script src="lib/leaflet/plugins/L.Control.MousePosition.js"></script>
+<script src="lib/leaflet/plugins/Leaflet.PolylineMeasure.js"></script>
+<script src="lib/leaflet/plugins/easy-button.js"></script>
+<script src="lib/leaflet/plugins/L.Control.Sidebar.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+<!--    plugins-->
+<script src="js/source_code.js"></script>
+    <script src="lib/leaflet/plugins/leaflet.awesome-markers.min.js"></script>
+        <script src="lib/leaflet/plugins/papaparse.min.js"></script>
+
+</html>

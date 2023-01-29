@@ -15,9 +15,6 @@
         <link rel="stylesheet" href="lib/leaflet/plugins/Leaflet.PolylineMeasure.css">
         <link rel="stylesheet" href="lib/leaflet/plugins/easy-button.css">
         <link rel="stylesheet" href="lib/leaflet/plugins/L.Control.Sidebar.css">
-        <!-- sheet-->
-                <link rel="stylesheet" href="lib/leaflet/plugins/font-awesome.min.css"/>
-        <link rel="stylesheet" href="lib/leaflet/plugins/leaflet.awesome-markers.css"/>
         <!--    plugins-->
 
         <link rel="stylesheet" href="css/style.css">
@@ -26,12 +23,10 @@
 .ppsize {    max-width: 200%;
     max-height: 200%;}
 </style>
-
-
-
     </head>
     <body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js" integrity="sha512-SGWgwwRA8xZgEoKiex3UubkSkV1zSE1BS6O4pXcaxcNtUlQsOmOmhVnDwIvqGRfEmuz83tIGL13cXMZn6upPyg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <h1>1, 2, 3, 4 für allellh</h1>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js" integrity="sha512-SGWgwwRA8xZgEoKiex3UubkSkV1zSE1BS6O4pXcaxcNtUlQsOmOmhVnDwIvqGRfEmuz83tIGL13cXMZn6upPyg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <h1>1, 2, 3, 4 für alleAA</h1>
     <p>Insert description of the project<br>This website is about this</p>
 
         <select name="select station" id="select-station" onchange="message">
@@ -100,9 +95,11 @@
     </div>
 
 <script>
+    document.write("sscr")
                     function addPoints(data) {
                         data = data.data;
                         let markerType = "marker";
+                        document.write("sdsds");
                         for (let row = 0; row < data.length; row++)
                         {
                             let marker;
@@ -155,8 +152,7 @@
                     }
 
                     function te(){
-                        ctlSidebar.show();
-                        ctlSidebar.setContent("before link");
+                        document.write("before link");
                         let pointsURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTh7dQ0JPgZNoagkd77B4S-5xZRpPFHXjXOA5Z7JKNITb4YGw31Pqro_k8Rlo1Gy1D_5YZy7TcvT_li/pub?gid=1170715324&single=true&output=csv";
                         document.write("teee");
                         Papa.parse(pointsURL, {download: true,header: true,complete: addPoints,});

@@ -150,14 +150,13 @@
                                     {marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon}).bindPopup("<h3>"+"Small Construction"+'</h3><h4>" + "on the road"+'</h4><br>'+"<img src=" + icon_url +" class=ppsize"+ ">" );}
                                 }
                             }
-                            marker.addTo(map);
+                            marker.addTo(map_div);
                     	}
                     }
 
                     function te(){
-                        ctlSidebar.toggle();
+                        ctlSidebar.show();
                         ctlSidebar.setContent("before link");
-
                         let pointsURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTh7dQ0JPgZNoagkd77B4S-5xZRpPFHXjXOA5Z7JKNITb4YGw31Pqro_k8Rlo1Gy1D_5YZy7TcvT_li/pub?gid=1170715324&single=true&output=csv";
                         document.write("teee");
                         Papa.parse(pointsURL, {download: true,header: true,complete: addPoints,});

@@ -22,6 +22,12 @@
 <style>
 .ppsize {    max-width: 200%;
     max-height: 200%;}
+var AlertIcon = L.icon({
+    iconUrl: 'data/alert3.png',
+    iconSize:     [30, 30], // size of the icon
+    iconAnchor:   [0,0], // point of the icon which will correspond to marker's location
+    popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
+});
 </style>
     </head>
     <body>
@@ -95,13 +101,7 @@
         </div>
         
         <script>
-            var AlertIcon = L.icon({
-    iconUrl: 'data/alert3.png',
-
-    iconSize:     [30, 30], // size of the icon
-    iconAnchor:   [0,0], // point of the icon which will correspond to marker's location
-    popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
-});
+            
             function addPoints(data) {
                 data = data.data;
                 let markerType = "marker";

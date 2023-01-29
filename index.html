@@ -102,7 +102,8 @@
                 {
                     let marker;
                     var icon_url = "https://drive.google.com/uc?export=view&id="+data[row].Image.substring(33,data[row].Image.length);   
-                    if(data[row].Type=="step"){
+                    if(data[row].Type=="step")
+                    {
                         document.write("step");
                         if(data[row].Position=="sidewalk-road")
                         {marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon}).bindPopup("<h3>Step</h3><h4>on the sidewalk</h4><br>"+"<img src=" + icon_url +" class=ppsize"+ ">" );}
@@ -111,7 +112,24 @@
                         else
                         {marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon}).bindPopup("<h3>Step</h3><h4>on the road</h4><br>"+"<img src=" + icon_url +" class=ppsize"+ ">" );}
                      }
-                     else
+                     
+                    
+                    marker.addTo(map);
+                }
+            }
+
+                     function te(){
+                        
+                        let pointsURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTh7dQ0JPgZNoagkd77B4S-5xZRpPFHXjXOA5Z7JKNITb4YGw31Pqro_k8Rlo1Gy1D_5YZy7TcvT_li/pub?gid=1170715324&single=true&output=csv";
+                        
+                        Papa.parse(pointsURL, {download: true,header: true,complete: addPoints,});
+                        }
+
+
+                   
+                </script>
+        
+<!--         else
                      {
                          if(data[row].Scale==3)
                          {
@@ -143,24 +161,7 @@
                              else
                              {marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon}).bindPopup("<h3>Small Construction</h3><h4>on the road</h4><br>"+"<img src=" + icon_url +" class=ppsize"+ ">" );}
                          }
-                     }
-                    
-                    marker.addTo(map);
-                }
-            }
-
-                     function te(){
-                        
-                        let pointsURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTh7dQ0JPgZNoagkd77B4S-5xZRpPFHXjXOA5Z7JKNITb4YGw31Pqro_k8Rlo1Gy1D_5YZy7TcvT_li/pub?gid=1170715324&single=true&output=csv";
-                        
-                        Papa.parse(pointsURL, {download: true,header: true,complete: addPoints,});
-                        }
-
-
-                   
-                </script>
-        
-        
+                     } -->
     
 
     <script>te();</script>

@@ -22,7 +22,7 @@ let pointsURL =
   "https://docs.google.com/spreadsheets/d/e/2PACX-1vTh7dQ0JPgZNoagkd77B4S-5xZRpPFHXjXOA5Z7JKNITb4YGw31Pqro_k8Rlo1Gy1D_5YZy7TcvT_li/pub?gid=1170715324&single=true&output=csv";
 $(document).ready(function () {
     // create map object
-    map = L.map('map_div',  {center:[48.13743,11.57549], zoom:13
+    map = L.map('map',  {center:[48.13743,11.57549], zoom:13
         , zoomControl:false });
 
     //popup Minar e Pakistan
@@ -99,11 +99,11 @@ OSM = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	subdomains: 'abcd',
 	maxZoom: 19
 }).addTo(map);
-//OSM = = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-//    maxZoom: 19,
-//    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-//});
-//});
+OSM = = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+   maxZoom: 19,
+   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+});
+
     // right click
     map.on('contextmenu',function (e) {
 

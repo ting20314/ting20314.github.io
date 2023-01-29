@@ -131,7 +131,7 @@
                              {marker = L.marker([data[row].lat,data[row].lng]);}
 //                              {marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon}).bindPopup("<h3>Large Construction</h3><h4>on the road</h4><br>"+"<img src=" + icon_url +" class=ppsize"+ ">" );}
                          }
-                         elas if(data[row].Scale==2)
+                         else if(data[row].Scale==2)
                          {
                               document.write("Med");
                              if(data[row].Position=="sidewalk-road")
@@ -144,7 +144,7 @@
                                  {marker = L.marker([data[row].lat,data[row].lng]);}
 //                              {marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon}).bindPopup("<h3>Medium Construction</h3><h4>on the road</h4><br>"+"<img src=" + icon_url +" class=ppsize"+ ">" );}
                          }
-                         elas
+                         else
                          {
                               document.write("Small");
                              if(data[row].Position=="sidewalk-road")

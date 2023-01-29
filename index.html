@@ -19,7 +19,10 @@
         <link rel="stylesheet" href="css/style.css">
 
 
-
+<style>
+.ppsize {    max-width: 200%;
+    max-height: 200%;}
+</style>
 
 
     </head>
@@ -104,8 +107,9 @@
                         {
                             let marker;
                             var icon_url = "https://drive.google.com/uc?export=view&id="+data[row].Image.substring(33,data[row].Image.length);
-                            marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon}).bindPopup("<b>" + data[row].Type + '</b><br>' +data[row].Position + data[row].Scale+"<img src=" + icon_url +" class=ppsize "+ "> " );
-                               marker.addTo(map);
+                            marker = L.marker([data[row].lat, data[row].lng]).bindPopup("<b>" + data[row].Type + '</b><br>' +data[row].Position + data[row].Scale+"<img src=" + icon_url +" class=ppsize "+ "> " );
+//                             ,{icon: AlertIcon}   
+                            marker.addTo(map);
 
                     	}
                     }

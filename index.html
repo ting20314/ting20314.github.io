@@ -76,6 +76,8 @@
 
 </head>
 <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js" integrity="sha512-SGWgwwRA8xZgEoKiex3UubkSkV1zSE1BS6O4pXcaxcNtUlQsOmOmhVnDwIvqGRfEmuz83tIGL13cXMZn6upPyg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <div class="container">
         <div class="boxes">
             <div id="box1">
@@ -94,7 +96,26 @@
 
         </div>
     </div>
-    
+    <script>
+                    function addPoints(data) {
+                        data = data.data;
+                        let markerType = "marker";
+                        for (let row = 0; row < data.length; row++) 
+                        {
+                            let marker;
+                            var icon_url = "https://drive.google.com/uc?export=view&id="+data[row].Image.substring(33,data[row].Image.length);
+                            marker = L.marker([data[row].lat, data[row].lng]).bindPopup("<b>" + data[row].Type + '</b><br>' +data[row].Position + data[row].Scale+"<img src=" + icon_url +" class=ppsize "+ "> " );
+                               marker.addTo(map);
+
+                    	}
+                    }
+                    
+                    function te(){
+                        let pointsURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTh7dQ0JPgZNoagkd77B4S-5xZRpPFHXjXOA5Z7JKNITb4YGw31Pqro_k8Rlo1Gy1D_5YZy7TcvT_li/pub?gid=1170715324&single=true&output=csv";
+                        Papa.parse(pointsURL, {download: true,header: true,complete: addPoints,});
+                        }
+                </script>
+    <script>te();</script>
 
 
     <!-- <div id="map"></div> -->

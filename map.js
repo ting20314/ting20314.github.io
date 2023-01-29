@@ -96,7 +96,8 @@ L.marker([48.12573, 11.55057], {icon: UbahnIcon}).addTo(map); //Poccistraße
 L.marker([48.15003, 11.54571], {icon: UbahnIcon}).addTo(map); //Maillingerstraße
 L.marker([48.14507, 11.56337], {icon: UbahnIcon}).addTo(map); //Königsplatz
 L.marker([48.15113, 11.56418], {icon: UbahnIcon}).addTo(map); //Theresienstraße
-L.marker([48.15577, 11.56680], {icon: UbahnIcon}).addTo(map).on('click', function() {ctlSidebar.toggle();}); //Josephsplatz
+L.marker([48.15577, 11.56680], {icon: UbahnIcon}).addTo(map); //Josephsplatz
+// .on('click', function() {ctlSidebar.toggle();})
 L.marker([48.14965, 11.58081], {icon: UbahnIcon}).addTo(map); //Universität
 L.marker([48.14790, 11.55685], {icon: UbahnIcon}).addTo(map); //Stiglmaierplatz
 

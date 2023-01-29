@@ -31,8 +31,7 @@
 
     </head>
     <body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js" integrity="sha512-SGWgwwRA8xZgEoKiex3UubkSkV1zSE1BS6O4pXcaxcNtUlQsOmOmhVnDwIvqGRfEmuz83tIGL13cXMZn6upPyg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <h1>1, 2, 3, 4 für allellh</h1>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js" integrity="sha512-SGWgwwRA8xZgEoKiex3UubkSkV1zSE1BS6O4pXcaxcNtUlQsOmOmhVnDwIvqGRfEmuz83tIGL13cXMZn6upPyg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    <h1>1, 2, 3, 4 für allellh</h1>
     <p>Insert description of the project<br>This website is about this</p>
 
         <select name="select station" id="select-station" onchange="message">
@@ -156,6 +155,9 @@
                     }
 
                     function te(){
+                        ctlSidebar.toggle();
+                        ctlSidebar.setContent("before link");
+
                         let pointsURL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTh7dQ0JPgZNoagkd77B4S-5xZRpPFHXjXOA5Z7JKNITb4YGw31Pqro_k8Rlo1Gy1D_5YZy7TcvT_li/pub?gid=1170715324&single=true&output=csv";
                         document.write("teee");
                         Papa.parse(pointsURL, {download: true,header: true,complete: addPoints,});

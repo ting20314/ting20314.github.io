@@ -88,22 +88,24 @@
         </select>
 
         
-<!--         <script>
+        <script>
             document.write("BEFORE");
-    
-                    function addPoints(data) {
-                        data = data.data;
-                        let markerType = "marker";
-                        document.write("sdsds");
-                        for (let row = 0; row < data.length; row++)
-                        {
-                            let marker;
-                            var icon_url = "https://drive.google.com/uc?export=view&id="+data[row].Image.substring(33,data[row].Image.length);
-                            document.write(data[row].Type);
-                            
-                            marker = L.marker([data[row].lat, data[row].lng];
-                                              
-//                             if(data[row].Type=="step")
+            function addPoints(data) {
+                data = data.data;
+                let markerType = "marker";
+                document.write("sdsds");
+                for (let row = 0; row < data.length; row++)
+                {
+                    let marker;
+                    var icon_url = "https://drive.google.com/uc?export=view&id="+data[row].Image.substring(33,data[row].Image.length);
+                    document.write(data[row].Type);    
+                    marker = L.marker([data[row].lat, data[row].lng]);
+                    marker.addTo(map_div);
+                }
+            }
+                    
+                    
+//                         if(data[row].Type=="step")
 //                             {
 //                                 document.write("first if for type");
 //                                 if(data[row].Position=="sidewalk-road")
@@ -144,9 +146,8 @@
 //                                     {marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon}).bindPopup("<h3>"+"Small Construction"+'</h3><h4>" + "on the road"+'</h4><br>'+"<img src=" + icon_url +" class=ppsize"+ ">" );}
 //                                 }
 //                             }
-                            marker.addTo(map_div);
-                    	}
-                    }
+                            
+                    	
 
                     function te(){
                         document.write("before link");
@@ -157,7 +158,7 @@
 
 
                    
-                </script> -->
+                </script>
         
         
     <div class="container-fluid">
@@ -167,7 +168,7 @@
         </div>
     </div>
 
-<!--     <script>te();</script> -->
+    <script>te();</script>
 
 
 

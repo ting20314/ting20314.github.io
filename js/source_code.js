@@ -64,13 +64,7 @@ var HousingIcon = L.icon({
     popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
 });
 
-var AlertIcon = L.icon({
-    iconUrl: 'data/alert3.png',
 
-    iconSize:     [30, 30], // size of the icon
-    iconAnchor:   [0,0], // point of the icon which will correspond to marker's location
-    popupAnchor:  [0, 0] // point from which the popup should open relative to the iconAnchor
-});
 
 //BARRIER IMAGES
 

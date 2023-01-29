@@ -111,8 +111,10 @@
                         {
                             let marker;
                             var icon_url = "https://drive.google.com/uc?export=view&id="+data[row].Image.substring(33,data[row].Image.length);
+                            document.write(data[row].Type);
                             if(data[row].Type=="step")
                             {
+                                document.write("first if for type");
                                 if(data[row].Position=="sidewalk-road")
                                 {marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon}).bindPopup("<h3>"+"Step"+'</h3><h4>" + "on the sidewalk"+'</h4><br>'+"<img src=" + icon_url +" class=ppsize"+ ">" );}
                                 else if(data[row].Position=="sidewalk-wall")
@@ -124,6 +126,7 @@
                             {
                                 if(data[row].Scale==3)
                                 {
+                                    document.write("scale3");
                                     if(data[row].Position=="sidewalk-road")
                                     {marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon}).bindPopup("<h3>"+"Serious Construction"+'</h3><h4>" + "on the sidewalk"+'</h4><br>'+"<img src=" + icon_url +" class=ppsize"+ ">" );}
                                     else if(data[row].Position=="sidewalk-wall")

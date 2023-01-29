@@ -106,11 +106,12 @@
                     document.write(data[row].Type);    
                     if(data[row].Type=="step"){
                         document.write("this is step");
-
+                            marker = L.marker([data[row].lat, data[row].lng]);
                             }
                             else
                             {
                                 document.write("this is construction");
+                                marker = L.marker([data[row].lat, data[row].lng]);
                             }
                     document.write("After Marker");
                     marker.addTo(map);

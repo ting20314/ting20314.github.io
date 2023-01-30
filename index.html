@@ -154,38 +154,38 @@
 
 
         <select name="select housing" id="select-housing" disable>
-            <option value="-1">Select one of the housing options</option>
-            <option value="-1" >1 - ALTSTADT-LEHEL - </option>
-            <option value="48.13724, 11.57563">Marienplatz</option>
-            <option value="48.13938, 11.56585">Karlsplatz</option>
-            <option value="48.13356, 11.56711">Sendlinger Tor</option>
-            <option value="48.13988, 11.58683" >Lehel</option>
-            <option value="48.14274, 11.57754" >Odeonsplatz</option>
-            <option value="-1" >2 - LUDWIGSVORSTADT-ISARVORSTADT - </option>
-            <option value="48.14026, 11.56064" >München Hauptbahnhof</option>
-            <option value="48.13635, 11.55326" >Theresienwiese</option>
-            <option value="48.12958, 11.55845" >Goetheplatz</option>
-            <option value="48.12917, 11.57439" >Fraunhoferstraße</option>
-            <option value="48.12573, 11.55057" >Poccistraße</option>
-            <option value="-1" >3 - MAXVORSTADT - </option>
-            <option value="48.15003, 11.54571" >Maillingerstraße</option>
-            <option value="48.14507, 11.56337" >Königsplatz</option>
-            <option value="48.15113, 11.56418" >Theresienstraße</option>
-            <option value="48.15577, 11.56680" >Josephsplatz</option>
-            <option value="48.14965, 11.58081" >Universität</option>
-            <option value="48.14790, 11.55685" >Stiglmaierplatz</option>
-            <option value="-1" >4 - SCHWABING-WEST - </option>
-            <option value="48.16218, 11.56867" >Hohenzollernplatz</option>
-            <option value="48.16683, 11.57867" >Bonner Platz</option>
-            <option value="48.17121, 11.57288" >Scheidplatz</option>
-            <option value="48.17553, 11.56641">Petuelring</option>
+            <option value="-1" disable>Select one of the housing options</option>
+            <option value="-1"  disable>1 - ALTSTADT-LEHEL - </option>
+            <option value="48.13724, 11.57563" disable>Marienplatz</option>
+            <option value="48.13938, 11.56585" disable>Karlsplatz</option>
+            <option value="48.13356, 11.56711" disable>Sendlinger Tor</option>
+            <option value="48.13988, 11.58683"  disable>Lehel</option>
+            <option value="48.14274, 11.57754"  disable>Odeonsplatz</option>
+            <option value="-1"  disable>2 - LUDWIGSVORSTADT-ISARVORSTADT - </option>
+            <option value="48.14026, 11.56064"  disable>München Hauptbahnhof</option>
+            <option value="48.13635, 11.55326"  disable>Theresienwiese</option>
+            <option value="48.12958, 11.55845"  disable>Goetheplatz</option>
+            <option value="48.12917, 11.57439"  disable>Fraunhoferstraße</option>
+            <option value="48.12573, 11.55057"  disable>Poccistraße</option>
+            <option value="-1"  disable>3 - MAXVORSTADT - </option>
+            <option value="48.15003, 11.54571"  disable>Maillingerstraße</option>
+            <option value="48.14507, 11.56337"  disable>Königsplatz</option>
+            <option value="48.15113, 11.56418"  disable>Theresienstraße</option>
+            <option value="48.15577, 11.56680"  disable>Josephsplatz</option>
+            <option value="48.14965, 11.58081"  disable>Universität</option>
+            <option value="48.14790, 11.55685"  disable>Stiglmaierplatz</option>
+            <option value="-1"  disable>4 - SCHWABING-WEST - </option>
+            <option value="48.16218, 11.56867"  disable>Hohenzollernplatz</option>
+            <option value="48.16683, 11.57867"  disable>Bonner Platz</option>
+            <option value="48.17121, 11.57288"  disable>Scheidplatz</option>
+            <option value="48.17553, 11.56641" disable>Petuelring</option>
         </select>
         <script>
 function myFunction() {
   if(document.getElementById("select-station").value==-1)
         {document.getElementById("select-housing").disabled="disabled";}
         else
-        {document.getElementById("select-housing").enabled="enabled";}
+        {document.getElementById("select-housing").disabled="enabled";}
 }
 </script>
         <div class="container-fluid">

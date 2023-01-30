@@ -155,37 +155,129 @@
 
         <select name="select housing" id="select-housing" disabled>
             <option value="-1" disabled>Select one of the housing options</option>
-            <option value="-1"  disabled>1 - ALTSTADT-LEHEL - </option>
-            <option value="48.13724, 11.57563" disabled>Marienplatz</option>
-            <option value="48.13938, 11.56585" disabled>Karlsplatz</option>
-            <option value="48.13356, 11.56711" disabled>Sendlinger Tor</option>
-            <option value="48.13988, 11.58683"  disabled>Lehel</option>
-            <option value="48.14274, 11.57754"  disabled>Odeonsplatz</option>
-            <option value="-1"  disabled>2 - LUDWIGSVORSTADT-ISARVORSTADT - </option>
-            <option value="48.14026, 11.56064"  disabled>München Hauptbahnhof</option>
-            <option value="48.13635, 11.55326"  disabled>Theresienwiese</option>
-            <option value="48.12958, 11.55845"  disabled>Goetheplatz</option>
-            <option value="48.12917, 11.57439"  disabled>Fraunhoferstraße</option>
-            <option value="48.12573, 11.55057"  disabled>Poccistraße</option>
-            <option value="-1"  disabled>3 - MAXVORSTADT - </option>
-            <option value="48.15003, 11.54571"  disabled>Maillingerstraße</option>
-            <option value="48.14507, 11.56337"  disabled>Königsplatz</option>
-            <option value="48.15113, 11.56418"  disabled>Theresienstraße</option>
-            <option value="48.15577, 11.56680"  disabled>Josephsplatz</option>
-            <option value="48.14965, 11.58081"  disabled>Universität</option>
-            <option value="48.14790, 11.55685"  disabled>Stiglmaierplatz</option>
-            <option value="-1"  disabled>4 - SCHWABING-WEST - </option>
-            <option value="48.16218, 11.56867"  disabled>Hohenzollernplatz</option>
-            <option value="48.16683, 11.57867"  disabled>Bonner Platz</option>
-            <option value="48.17121, 11.57288"  disabled>Scheidplatz</option>
-            <option value="48.17553, 11.56641" disabled>Petuelring</option>
+            <option id="1-0" value="-1"  disabled>1 - ALTSTADT-LEHEL - </option>
+            <option id="1-1" value="48.136273, 11.572853" disabled>Sendlingerstraße</option>
+            <option id="1-2" value="48.155198, 11.565252" disabled>Görresstraße</option>
+            <option id="1-3" value="48.139908, 11.591901" disabled>Liebigstraße</option>
+            <option id="1-4" value="48.138732, 11.590591"  disabled>Gewürzmühlstraße</option>
+            <option id="1-5" value="48.137871, 11.559438"  disabled>Schwanthalerstraße</option>
+            <option id="1-6" value="48.137871, 11.559438"  disabled>Schwanthalerstraße</option>
+            <option id="1-7" value="48.137871, 11.559438"  disabled>Schwanthalerstraße</option>
+            <option id="2-0" value="-1"  disabled>2 - LUDWIGSVORSTADT-ISARVORSTADT - </option>
+            <option id="2-1" value="48.137871, 11.559438"  disabled>Schwanthalerstraße</option>
+            <option id="2-2" value="48.137871, 11.559438"  disabled>Schwanthalerstraße</option>
+            <option id="2-3" value="48.137871, 11.559438"  disabled>Schwanthalerstraße</option>
+            <option id="3-0" value="-1"  disabled>3 - MAXVORSTADT - </option>
+            <option id="3-1" value="48.152249, 11.582348"  disabled>Clemensstraße</option>
+            <option id="3-2" value="48.155198, 11.565252"  disabled>Görresstraße</option>
+            <option id="4-0" value="-1"  disabled>4 - SCHWABING-WEST - </option>
+            <option id="4-1" value="48.166841, 11.556467"  disabled>Centa-Herker-Bogen</option>
+            <option id="4-2" value="48.166841, 11.556467"  disabled>Centa-Herker-Bogen</option>
+            <option id="4-3" value="48.166841, 11.556467"  disabled>Centa-Herker-Bogen</option>
         </select>
         <script>
 function myFunction() {
-  if(document.getElementById("select-station").value==-1)
-        {document.getElementById("select-housing").disabled=true;}
-        else
-        {document.getElementById("select-housing").disabled=false;}
+   if(document.getElementById("select-station").value=="48.13724, 11.57563"||
+      document.getElementById("select-station").value=="48.13938, 11.56585"||
+      document.getElementById("select-station").value=="48.13356, 11.56711"||
+      document.getElementById("select-station").value=="48.13988, 11.58683"||
+      document.getElementById("select-station").value=="48.14274, 11.57754"){
+        document.getElementById("1-0").disabled = false;
+        document.getElementById("1-1").disabled = false;
+        document.getElementById("1-2").disabled = false;
+        document.getElementById("1-3").disabled = false;
+        document.getElementById("1-4").disabled = false;
+        document.getElementById("1-5").disabled = false;
+        document.getElementById("1-6").disabled = false;
+        document.getElementById("1-7").disabled = false;
+        document.getElementById("2-0").disabled = true; 
+        document.getElementById("2-1").disabled = true;
+        document.getElementById("2-2").disabled = true;
+        document.getElementById("2-3").disabled = true;
+        document.getElementById("3-0").disabled = true;
+        document.getElementById("3-1").disabled = true;
+        document.getElementById("3-2").disabled = true;
+        document.getElementById("4-0").disabled = true; 
+        document.getElementById("4-1").disabled = true;
+        document.getElementById("4-2").disabled = true;
+        document.getElementById("4-3").disabled = true;
+        }
+   else if(document.getElementById("select-station").value=="48.14026, 11.56064"||
+      document.getElementById("select-station").value=="48.13635, 11.55326"||
+      document.getElementById("select-station").value=="48.12958, 11.55845"||
+      document.getElementById("select-station").value=="48.12917, 11.57439"||
+      document.getElementById("select-station").value=="48.12573, 11.55057"){
+        document.getElementById("1-0").disabled = true;
+        document.getElementById("1-1").disabled = true;
+        document.getElementById("1-2").disabled = true;
+        document.getElementById("1-3").disabled = true;
+        document.getElementById("1-4").disabled = true;
+        document.getElementById("1-5").disabled = true;
+        document.getElementById("1-6").disabled = true;
+        document.getElementById("1-7").disabled = true;
+        document.getElementById("2-0").disabled = false; 
+        document.getElementById("2-1").disabled = false;
+        document.getElementById("2-2").disabled = false;
+        document.getElementById("2-3").disabled = false;
+        document.getElementById("3-0").disabled = true;
+        document.getElementById("3-1").disabled = true;
+        document.getElementById("3-2").disabled = true;
+        document.getElementById("4-0").disabled = true; 
+        document.getElementById("4-1").disabled = true;
+        document.getElementById("4-2").disabled = true;
+        document.getElementById("4-3").disabled = true;
+        }
+    else if(document.getElementById("select-station").value=="48.15003, 11.54571"||
+      document.getElementById("select-station").value=="48.14507, 11.56337"||
+      document.getElementById("select-station").value=="48.12958, 11.55845"||
+      document.getElementById("select-station").value=="48.15577, 11.56680"||
+      document.getElementById("select-station").value=="48.14965, 11.58081"||
+      document.getElementById("select-station").value=="48.14790, 11.55685"){
+        document.getElementById("1-0").disabled = true;
+        document.getElementById("1-1").disabled = true;
+        document.getElementById("1-2").disabled = true;
+        document.getElementById("1-3").disabled = true;
+        document.getElementById("1-4").disabled = true;
+        document.getElementById("1-5").disabled = true;
+        document.getElementById("1-6").disabled = true;
+        document.getElementById("1-7").disabled = true;
+        document.getElementById("2-0").disabled = true; 
+        document.getElementById("2-1").disabled = true;
+        document.getElementById("2-2").disabled = true;
+        document.getElementById("2-3").disabled = true;
+        document.getElementById("3-0").disabled = false;
+        document.getElementById("3-1").disabled = false;
+        document.getElementById("3-2").disabled = false;
+        document.getElementById("4-0").disabled = true; 
+        document.getElementById("4-1").disabled = true;
+        document.getElementById("4-2").disabled = true;
+        document.getElementById("4-3").disabled = true;
+        }
+    else if(document.getElementById("select-station").value=="48.16218, 11.56867"||
+      document.getElementById("select-station").value=="48.16683, 11.57867"||
+      document.getElementById("select-station").value=="48.17121, 11.57288"||
+      document.getElementById("select-station").value=="48.17553, 11.56641"){
+        document.getElementById("1-0").disabled = true;
+        document.getElementById("1-1").disabled = true;
+        document.getElementById("1-2").disabled = true;
+        document.getElementById("1-3").disabled = true;
+        document.getElementById("1-4").disabled = true;
+        document.getElementById("1-5").disabled = true;
+        document.getElementById("1-6").disabled = true;
+        document.getElementById("1-7").disabled = true;
+        document.getElementById("2-0").disabled = true; 
+        document.getElementById("2-1").disabled = true;
+        document.getElementById("2-2").disabled = true;
+        document.getElementById("2-3").disabled = true;
+        document.getElementById("3-0").disabled = true;
+        document.getElementById("3-1").disabled = true;
+        document.getElementById("3-2").disabled = true;
+        document.getElementById("4-0").disabled = false; 
+        document.getElementById("4-1").disabled = false;
+        document.getElementById("4-2").disabled = false;
+        document.getElementById("4-3").disabled = false;
+        }
+   }
 }
 </script>
         <div class="container-fluid">

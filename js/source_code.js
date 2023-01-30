@@ -22,36 +22,7 @@ var other;
 let pointsURL =
   "https://docs.google.com/spreadsheets/d/e/2PACX-1vTh7dQ0JPgZNoagkd77B4S-5xZRpPFHXjXOA5Z7JKNITb4YGw31Pqro_k8Rlo1Gy1D_5YZy7TcvT_li/pub?gid=1170715324&single=true&output=csv";
 $(document).ready(function () {
-    // create map object
-    map = L.map('map_div',  {center:[48.13743,11.57549], zoom:13
-        , zoomControl:false });
-
-    //popup Minar e Pakistan
-    popMinarEPakistan =  L.popup();
-    popMinarEPakistan.setLatLng([31.59248,74.30966]);
-    popMinarEPakistan.setContent("<h2>Minar e Pakistan</h2>" +
-        "<img src='img/minar-e-pakistan.jpg'  width='300px'/>");
-
-	
-	
-    //map.openPopup(popMinarEPakistan);
-    //popMinarEPakistan.openOn(map);
-
-    // plugins
-    ctlPan = L.control.pan().addTo(map);
-    ctlZoomslider = L.control.zoomslider({position:'topright'}).addTo(map);
-
-    ctlMousePosition = L.control.mousePosition().addTo(map);
-    ctlMeasure =L.control.polylineMeasure().addTo(map);
-
-
-    ctlSidebar = L.control.sidebar('side-bar').addTo(map);
-    ctlEasyButton = L.easyButton('fa-exchange', function () {
-        ctlSidebar.toggle();
-        ctlSidebar.setContent("<a href='https://forms.gle/MgLVYHANrJEjkMCX7' target='_blank'>Report Us More Barriers</a>");
-    }).addTo(map);
-
-const openModalButtons = document.querySelectorAll('[data-modal-target]')
+	const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')
 const overlay = document.getElementById('overlay')
 
@@ -87,6 +58,42 @@ function closeModal(modal) {
     modal.classList.remove('active')
     overlay.classList.remove('active')
 }
+	
+	
+	
+	
+	
+	
+    // create map object
+    map = L.map('map_div',  {center:[48.13743,11.57549], zoom:13
+        , zoomControl:false });
+
+    //popup Minar e Pakistan
+    popMinarEPakistan =  L.popup();
+    popMinarEPakistan.setLatLng([31.59248,74.30966]);
+    popMinarEPakistan.setContent("<h2>Minar e Pakistan</h2>" +
+        "<img src='img/minar-e-pakistan.jpg'  width='300px'/>");
+
+	
+	
+    //map.openPopup(popMinarEPakistan);
+    //popMinarEPakistan.openOn(map);
+
+    // plugins
+    ctlPan = L.control.pan().addTo(map);
+    ctlZoomslider = L.control.zoomslider({position:'topright'}).addTo(map);
+
+    ctlMousePosition = L.control.mousePosition().addTo(map);
+    ctlMeasure =L.control.polylineMeasure().addTo(map);
+
+
+    ctlSidebar = L.control.sidebar('side-bar').addTo(map);
+    ctlEasyButton = L.easyButton('fa-exchange', function () {
+        ctlSidebar.toggle();
+        ctlSidebar.setContent("<a href='https://forms.gle/MgLVYHANrJEjkMCX7' target='_blank'>Report Us More Barriers</a>");
+    }).addTo(map);
+
+
 	
 var UbahnIcon = L.icon({
     iconUrl: 'data/U-Bahnlogo_München.png',

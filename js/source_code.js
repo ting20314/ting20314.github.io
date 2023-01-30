@@ -44,8 +44,9 @@ overlay.addEventListener('click', () => {
 
 closeModalButtons.forEach(button => {
     button.addEventListener('click', () => {
-        const modal = button.closest('.modal')
-        closeModal(modal)
+        const modal = button.closest('.modal');
+        modal.classList.remove('active');
+    overlay.classList.remove('active');
     })
 })
 

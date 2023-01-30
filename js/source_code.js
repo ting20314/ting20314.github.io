@@ -37,8 +37,7 @@ openModalButtons.forEach(button => {
 overlay.addEventListener('click', () => {
     const mmodals = document.querySelectorAll('.mmodal.active')
     mmodals.forEach(mmodal => {
-       mmodal.classList.remove('active');
-    overlay.classList.remove('active');
+      closeModal(mmodal)
     })
 })
 
@@ -50,7 +49,7 @@ closeModalButtons.forEach(button => {
     })
 })
 
-    function openModal(modal) {
+    function openModal(mmodal) {
 
         if (mmodal == null)return
     mmodal.classList.add('active')
@@ -58,7 +57,7 @@ closeModalButtons.forEach(button => {
         
 }
 
-function closeModal(modal) {
+function closeModal(mmodal) {
 
     if (mmodal == null) 
     return

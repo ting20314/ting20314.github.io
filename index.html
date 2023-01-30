@@ -37,7 +37,7 @@
 }
 
 
-.modal {
+.mmodal {
     position: fixed;
     top: 0%;
     left: 13%;
@@ -52,11 +52,11 @@
     max-width: 80%;
 }
 
-.modal.active {
+.mmodal.active {
     transform: translate(-50%, -50%) scale(1);
 }
 
-.modal-header {
+.mmodal-header {
     padding: 10px 15px;
     display: flex;
     justify-content: space-between;
@@ -64,12 +64,12 @@
     border-bottom: 1px solid black;
 }
 
-.modal-header .title {
+.mmodal-header .title {
     font-size: 1.25rem;
     font-weight: bold;
 }
 
-.modal-header .close-button {
+.mmodal-header .close-button {
     cursor: pointer;
     border: none;
     outline: none;
@@ -78,7 +78,7 @@
     font-weight: bold;
 }
 
-.modal-body {
+.mmodal-body {
     padding: 10px 15px;
 }
 
@@ -107,28 +107,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js" integrity="sha512-SGWgwwRA8xZgEoKiex3UubkSkV1zSE1BS6O4pXcaxcNtUlQsOmOmhVnDwIvqGRfEmuz83tIGL13cXMZn6upPyg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <h1>1, 2, 3, 4 für alle</h1>
     <p>Insert description of the project<br>This website is about this</p>
-<!-- <script>
-    function openModal(modal) {
-         return
-    modal.classList.add('active')
-    overlay.classList.add('active')
-//         if (modal == null){
-//             document.write("This is openModel");}
-//         else{document.write("modal is not null")}
-//             return
-//     modal.classList.add('active')
-//     overlay.classList.add('active')
         
-}
 
-function closeModal(modal) {
-
-//     if (modal == null) 
-    return
-    modal.classList.remove('active')
-    overlay.classList.remove('active')
-}
-        </script> -->
         <button data-modal-target="#modal">HOW TO USE</button>
   <div class="modal" id="modal">
       <div class="modal-header">

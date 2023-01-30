@@ -303,7 +303,7 @@ L.geoJSON(lineJSON).addTo(map);
 });
 document.getElementById('select-station').addEventListener('change', function(e){
     let coords = e.target.value.split(",");
-    map.flyTo(coords,19);
+    map.flyTo(coords,18);
 
 });
 

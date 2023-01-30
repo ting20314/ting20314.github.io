@@ -201,6 +201,10 @@ function myFunction() {
         document.getElementById("4-1").disabled = true;
         document.getElementById("4-2").disabled = true;
         document.getElementById("4-3").disabled = true;
+       document.getElementById('select-housing').addEventListener('change', function(e){
+    let coords = e.target.value.split(",");
+    map.flyTo(coords,15);
+});
         }
    else if(document.getElementById("select-station").value=="48.14026, 11.56064"||
       document.getElementById("select-station").value=="48.13635, 11.55326"||
@@ -226,6 +230,11 @@ function myFunction() {
         document.getElementById("4-1").disabled = true;
         document.getElementById("4-2").disabled = true;
         document.getElementById("4-3").disabled = true;
+       
+       document.getElementById('select-housing').addEventListener('change', function(e){
+    let coords = e.target.value.split(",");
+    map.flyTo(coords,15);
+});
         }
     else if(document.getElementById("select-station").value=="48.15003, 11.54571"||
       document.getElementById("select-station").value=="48.14507, 11.56337"||
@@ -252,6 +261,11 @@ function myFunction() {
         document.getElementById("4-1").disabled = true;
         document.getElementById("4-2").disabled = true;
         document.getElementById("4-3").disabled = true;
+        
+        document.getElementById('select-housing').addEventListener('change', function(e){
+    let coords = e.target.value.split(",");
+    map.flyTo(coords,15);
+});
         }
     else if(document.getElementById("select-station").value=="48.16218, 11.56867"||
       document.getElementById("select-station").value=="48.16683, 11.57867"||
@@ -276,8 +290,17 @@ function myFunction() {
         document.getElementById("4-1").disabled = false;
         document.getElementById("4-2").disabled = false;
         document.getElementById("4-3").disabled = false;
+        
+        document.getElementById('select-housing').addEventListener('change', function(e){
+    let coords = e.target.value.split(",");
+    map.flyTo(coords,15);
+});
         }
     }
+            
+            
+    
+
 </script>
         <div class="container-fluid">
             <div class="row">

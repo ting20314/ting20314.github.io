@@ -36,7 +36,7 @@ openModalButtons.forEach(button => {
 
 overlay.addEventListener('click', () => {
     const mmodals = document.querySelectorAll('.mmodal.active')
-    modals.forEach(modal => {
+    mmodals.forEach(mmodal => {
        mmodal.classList.remove('active');
     overlay.classList.remove('active');
     })
@@ -60,7 +60,7 @@ closeModalButtons.forEach(button => {
 
 function closeModal(modal) {
 
-//     if (mmodal == null) 
+    if (mmodal == null) 
     return
     mmodal.classList.remove('active')
     overlay.classList.remove('active')

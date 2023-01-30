@@ -306,11 +306,6 @@ document.getElementById('select-station').addEventListener('change', function(e)
     map.flyTo(coords,15);
 
 });
-document.getElementById('select-housing').addEventListener('change', function(e){
-    let coords = e.target.value.split(",");
-    map.flyTo(coords,15);
-
-});
 
 
 

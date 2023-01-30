@@ -28,28 +28,45 @@ const overlay = document.getElementById('overlay')
 
 openModalButtons.forEach(button => {
     button.addEventListener('click', () => {
-        const modal = document.querySelector(button.dataset.modalTarget);
-        modal.classList.add('active');
+        const mmodal = document.querySelector(button.dataset.modalTarget);
+        mmodal.classList.add('active');
     overlay.classList.add('active');
     })
 })
 
 overlay.addEventListener('click', () => {
-    const modals = document.querySelectorAll('.modal.active')
+    const mmodals = document.querySelectorAll('.mmodal.active')
     modals.forEach(modal => {
-       modal.classList.remove('active');
+       mmodal.classList.remove('active');
     overlay.classList.remove('active');
     })
 })
 
 closeModalButtons.forEach(button => {
     button.addEventListener('click', () => {
-        const modal = button.closest('.modal');
-        modal.classList.remove('active');
+        const mmodal = button.closest('.mmodal');
+        mmodal.classList.remove('active');
     overlay.classList.remove('active');
     })
 })
 
+    function openModal(modal) {
+
+        if (mmodal == null)return
+    mmodal.classList.add('active')
+    overlay.classList.add('active')
+        
+}
+
+function closeModal(modal) {
+
+    if (mmodal == null) 
+    return
+    mmodal.classList.remove('active')
+    overlay.classList.remove('active')
+}
+
+        
 
 	
 	

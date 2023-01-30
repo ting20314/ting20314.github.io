@@ -32,6 +32,8 @@ $(document).ready(function () {
     popMinarEPakistan.setContent("<h2>Minar e Pakistan</h2>" +
         "<img src='img/minar-e-pakistan.jpg'  width='300px'/>");
 
+	
+	
     //map.openPopup(popMinarEPakistan);
     //popMinarEPakistan.openOn(map);
 
@@ -49,6 +51,43 @@ $(document).ready(function () {
         ctlSidebar.setContent("<a href='https://forms.gle/MgLVYHANrJEjkMCX7' target='_blank'>Report Us More Barriers</a>");
     }).addTo(map);
 
+const openModalButtons = document.querySelectorAll('[data-modal-target]')
+const closeModalButtons = document.querySelectorAll('[data-close-button]')
+const overlay = document.getElementById('overlay')
+
+openModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = document.querySelector(button.dataset.modalTarget)
+        openModal(modal)
+    })
+})
+
+overlay.addEventListener('click', () => {
+    const modals = document.querySelectorAll('.modal.active')
+    modals.forEach(modal => {
+        closeModal(modal)
+    })
+})
+
+closeModalButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = button.closest('.modal')
+        closeModal(modal)
+    })
+})
+
+function openModal(modal) {
+    if (modal == null) return
+    modal.classList.add('active')
+    overlay.classList.add('active')
+}
+
+function closeModal(modal) {
+    if (modal == null) return
+    modal.classList.remove('active')
+    overlay.classList.remove('active')
+}
+	
 var UbahnIcon = L.icon({
     iconUrl: 'data/U-Bahnlogo_München.png',
 

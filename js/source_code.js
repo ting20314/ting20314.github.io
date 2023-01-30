@@ -28,15 +28,17 @@ const overlay = document.getElementById('overlay')
 
 openModalButtons.forEach(button => {
     button.addEventListener('click', () => {
-        const modal = document.querySelector(button.dataset.modalTarget)
-        openModal(modal)
+        const modal = document.querySelector(button.dataset.modalTarget);
+        modal.classList.add('active');
+    overlay.classList.add('active');
     })
 })
 
 overlay.addEventListener('click', () => {
     const modals = document.querySelectorAll('.modal.active')
     modals.forEach(modal => {
-        closeModal(modal)
+       modal.classList.remove('active');
+    overlay.classList.remove('active');
     })
 })
 

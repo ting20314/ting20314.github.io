@@ -149,9 +149,11 @@
             <option value="48.17553, 11.56641">Petuelring</option>
         </select>
 
+        <button onclick="myFunction()">Summit</button>
 
 
-        <select name="select housing" id="select-housing">
+
+        <select name="select housing" id="select-housing" disable>
             <option value="-1">Select one of the housing options</option>
             <option value="-1" >1 - ALTSTADT-LEHEL - </option>
             <option value="48.13724, 11.57563">Marienplatz</option>
@@ -178,7 +180,14 @@
             <option value="48.17121, 11.57288" >Scheidplatz</option>
             <option value="48.17553, 11.56641">Petuelring</option>
         </select>
-        
+        <script>
+function myFunction() {
+  if(document.getElementById("select-station").value==-1)
+        {document.getElementById("select-housing").disabled="disabled";}
+        else
+        {document.getElementById("select-housing").enabled="enabled";}
+}
+</script>
         <div class="container-fluid">
             <div class="row">
                 <div id="map_div" class="col-md-12"> </div>

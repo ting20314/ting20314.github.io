@@ -109,9 +109,12 @@
     <p>Insert description of the project<br>This website is about this</p>
 <script>
     function openModal(modal) {
-        if (modal == null){
-            document.write("This is openModel");}
-        else{document.write("modal is not null")}
+         return
+    modal.classList.add('active')
+    overlay.classList.add('active')
+//         if (modal == null){
+//             document.write("This is openModel");}
+//         else{document.write("modal is not null")}
 //             return
 //     modal.classList.add('active')
 //     overlay.classList.add('active')
@@ -119,8 +122,9 @@
 }
 
 function closeModal(modal) {
-    document.write("This is closeModel");
-    if (modal == null) return
+
+//     if (modal == null) 
+    return
     modal.classList.remove('active')
     overlay.classList.remove('active')
 }

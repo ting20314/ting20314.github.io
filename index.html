@@ -109,12 +109,14 @@
     <p>Insert description of the project<br>This website is about this</p>
 <script>
     function openModal(modal) {
+        document.write("This is openModel");
     if (modal == null) return
     modal.classList.add('active')
     overlay.classList.add('active')
 }
 
 function closeModal(modal) {
+    document.write("This is closeModel");
     if (modal == null) return
     modal.classList.remove('active')
     overlay.classList.remove('active')

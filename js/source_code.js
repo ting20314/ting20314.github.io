@@ -107,15 +107,15 @@ L.control.Legend({
     legends: [{
         label: "   U-Bahn",
         type: "image",
-        url: "data/U-Bahnlogo_München__.png",},
+        url: "data/U-Bahnlogo_München__.jpg",},
         {
         label: "   Housing",
         type: "image",
-        url: "data/house_logo2__.png",},
+        url: "data/house_logo2__.jpg",},
         {
         label: "   Barrier",
         type: "image",
-        url: "data/alert3__.png",}
+        url: "data/alert3__.jpg",}
     ]
 }).addTo(map);
 	

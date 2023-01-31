@@ -99,7 +99,7 @@ function closeModal(mmodal) {
     ctlSidebar = L.control.sidebar('side-bar').addTo(map);
     ctlEasyButton = L.easyButton('fa-exchange', function () {
         ctlSidebar.toggle();
-        ctlSidebar.setContent("<a href='https://forms.gle/MgLVYHANrJEjkMCX7' target='_blank'>Report Us More Barriers</a>");
+        ctlSidebar.setContent("<b>WE WANT YOUR HELP!</b><br>The more obstacle data you have, the more comprehensive the map is.<br><a href='https://forms.gle/MgLVYHANrJEjkMCX7' target='_blank'>Report Us More Barriers</a>");
     }).addTo(map);
 
 

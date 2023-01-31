@@ -102,7 +102,22 @@ function closeModal(mmodal) {
         ctlSidebar.setContent("<b>WE WANT YOUR HELP!</b><br>The more obstacle data we have, <br> the more comprehensive the map is.<br><a href='https://forms.gle/MgLVYHANrJEjkMCX7' target='_blank'>Report Us More Barriers</a>");
     }).addTo(map);
 
-
+L.control.Legend({
+    position: "bottomleft",
+    legends: [{
+        label: "   U-Bahn",
+        type: "image",
+        url: "data/U-Bahnlogo_München__.png",},
+        {
+        label: "   Housing",
+        type: "image",
+        url: "data/house_logo2__.png",},
+        {
+        label: "   Barrier",
+        type: "image",
+        url: "data/alert3__.png",}
+    ]
+}).addTo(map);
 	
 var UbahnIcon = L.icon({
     iconUrl: 'data/U-Bahnlogo_München.png',

@@ -326,8 +326,12 @@ L.geoJSON(lineJSON).addTo(map);
 
 });
 document.getElementById('select-station').addEventListener('change', function(e){
+	if(document.getElementById('select-station').value=="-11"){
+	map.flyTo([48.13743,11.57549],13);}
+	else
+	{
     let coords = e.target.value.split(",");
-    map.flyTo(coords,15);
+    map.flyTo(coords,15);}
 
 });
 

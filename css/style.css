@@ -1,6 +1,7 @@
 #map_div{
     transform: scale(1);
-    height: 75vh;
+    height: 78vh;
+    border-radius: 10px;
 }
 h1 {
     margin: 15px;

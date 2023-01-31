@@ -331,7 +331,7 @@ document.getElementById('select-station').addEventListener('change', function(e)
 	else
 	{
     let coords = e.target.value.split(",");
-    map.flyTo(coords,15);}
+    map.flyTo(coords,17);}
 
 });
 

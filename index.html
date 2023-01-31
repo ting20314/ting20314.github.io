@@ -149,12 +149,12 @@
             <option value="48.17553, 11.56641">Petuelring</option>
         </select>
 
-        <button onclick="myFunction()">Summit</button>
+        <button onclick="myFunction()">Submit</button>
 
 
 
         <select name="select housing" id="select-housing">
-            <option value="-1" disabled>Select one of the housing options</option>
+            <option id=¨0-0¨ value="-1" disabled>Select one of the housing options</option>
             <option id="1-0" value="-1"  disabled>1 - ALTSTADT-LEHEL - </option>
             <option id="1-1" value="48.136273, 11.572853" disabled>Sendlingerstraße</option>
             <option id="1-2" value="48.155198, 11.565252" disabled>Görresstraße</option>
@@ -164,8 +164,8 @@
             <option id="1-6" value="48.137871, 11.559438"  disabled>Schwanthalerstraße</option>
             <option id="1-7" value="48.137871, 11.559438"  disabled>Schwanthalerstraße</option>
             <option id="2-0" value="-1"  disabled>2 - LUDWIGSVORSTADT-ISARVORSTADT - </option>
-<!--             <option id="2-1" value="48.137871, 11.559438"  disabled>Schwanthalerstraße</option>
-            <option id="2-2" value="48.137871, 11.559438"  disabled>Schwanthalerstraße</option>
+            <option id="2-1" value="-1"  disabled>No Data</option>
+<!--             <option id="2-2" value="48.137871, 11.559438"  disabled>Schwanthalerstraße</option>
             <option id="2-3" value="48.137871, 11.559438"  disabled>Schwanthalerstraße</option> -->
             <option id="3-0" value="-1"  disabled>3 - MAXVORSTADT - </option>
             <option id="3-1" value="48.152249, 11.582348"  disabled>Clemensstraße</option>
@@ -182,6 +182,7 @@ function myFunction() {
       document.getElementById("select-station").value=="48.13356, 11.56711"||
       document.getElementById("select-station").value=="48.13988, 11.58683"||
       document.getElementById("select-station").value=="48.14274, 11.57754"){
+       document.getElementById("0-0").disabled = false;
         document.getElementById("1-0").disabled = false;
         document.getElementById("1-1").disabled = false;
         document.getElementById("1-2").disabled = false;
@@ -191,7 +192,7 @@ function myFunction() {
         document.getElementById("1-6").disabled = false;
         document.getElementById("1-7").disabled = false;
         document.getElementById("2-0").disabled = true; 
-//         document.getElementById("2-1").disabled = true;
+         document.getElementById("2-1").disabled = true;
 //         document.getElementById("2-2").disabled = true;
 //         document.getElementById("2-3").disabled = true;
         document.getElementById("3-0").disabled = true;
@@ -211,7 +212,8 @@ function myFunction() {
       document.getElementById("select-station").value=="48.12958, 11.55845"||
       document.getElementById("select-station").value=="48.12917, 11.57439"||
       document.getElementById("select-station").value=="48.12573, 11.55057"){
-        document.getElementById("1-0").disabled = true;
+       document.getElementById("0-0").disabled = false; 
+       document.getElementById("1-0").disabled = true;
         document.getElementById("1-1").disabled = true;
         document.getElementById("1-2").disabled = true;
         document.getElementById("1-3").disabled = true;
@@ -220,7 +222,7 @@ function myFunction() {
         document.getElementById("1-6").disabled = true;
         document.getElementById("1-7").disabled = true;
         document.getElementById("2-0").disabled = false; 
-//         document.getElementById("2-1").disabled = false;
+         document.getElementById("2-1").disabled = false;
 //         document.getElementById("2-2").disabled = false;
 //         document.getElementById("2-3").disabled = false;
         document.getElementById("3-0").disabled = true;
@@ -242,6 +244,7 @@ function myFunction() {
       document.getElementById("select-station").value=="48.15577, 11.56680"||
       document.getElementById("select-station").value=="48.14965, 11.58081"||
       document.getElementById("select-station").value=="48.14790, 11.55685"){
+        document.getElementById("0-0").disabled = false;
         document.getElementById("1-0").disabled = true;
         document.getElementById("1-1").disabled = true;
         document.getElementById("1-2").disabled = true;
@@ -251,7 +254,7 @@ function myFunction() {
         document.getElementById("1-6").disabled = true;
         document.getElementById("1-7").disabled = true;
         document.getElementById("2-0").disabled = true; 
-//         document.getElementById("2-1").disabled = true;
+         document.getElementById("2-1").disabled = true;
 //         document.getElementById("2-2").disabled = true;
 //         document.getElementById("2-3").disabled = true;
         document.getElementById("3-0").disabled = false;
@@ -271,6 +274,7 @@ function myFunction() {
       document.getElementById("select-station").value=="48.16683, 11.57867"||
       document.getElementById("select-station").value=="48.17121, 11.57288"||
       document.getElementById("select-station").value=="48.17553, 11.56641"){
+        document.getElementById("0-0").disabled = false;
         document.getElementById("1-0").disabled = true;
         document.getElementById("1-1").disabled = true;
         document.getElementById("1-2").disabled = true;
@@ -280,7 +284,7 @@ function myFunction() {
         document.getElementById("1-6").disabled = true;
         document.getElementById("1-7").disabled = true;
         document.getElementById("2-0").disabled = true; 
-//         document.getElementById("2-1").disabled = true;
+         document.getElementById("2-1").disabled = true;
 //         document.getElementById("2-2").disabled = true;
 //         document.getElementById("2-3").disabled = true;
         document.getElementById("3-0").disabled = true;

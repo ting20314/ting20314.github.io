@@ -13,13 +13,13 @@ h1 {
     box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);
     border-radius: 4px;
     cursor: pointer;
-    font-size: smaller;
+    font-size: 25px;
 }
 
 p {
     text-align: center;
     font-family: 'Philosopher', sans-serif;
     box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);
-    font-size: smaller;
+    font-size: 15px;
 }
 

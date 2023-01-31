@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: 'Philosopher', sans-serif;
   padding: 10px;
+  border-radius: 15px;
   z-index: 2000; }
   .leaflet-sidebar.left {
     left: -500px;

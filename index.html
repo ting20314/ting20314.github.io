@@ -153,7 +153,7 @@
 
 
 
-        <select name="select housing" id="select-housing" hidden>
+        <select name="select housing" id="select-housing">
             <option id="0-0" value="-1" >Select one of the housing options</option>
             <option id="1-0" value="-1"  disabled>1 - ALTSTADT-LEHEL - </option>
             <option id="1-1" value="48.136273, 11.572853" disabled>Sendlingerstraße</option>
@@ -182,7 +182,7 @@ function myFunction() {
       document.getElementById("select-station").value=="48.13356, 11.56711"||
       document.getElementById("select-station").value=="48.13988, 11.58683"||
       document.getElementById("select-station").value=="48.14274, 11.57754"){
-       document.getMlementById("select-housing").removeAttribute("hidden");
+
        document.getElementById("0-0").disabled = true;
         document.getElementById("1-0").disabled = false;
         document.getElementById("1-1").disabled = false;
@@ -213,7 +213,7 @@ function myFunction() {
       document.getElementById("select-station").value=="48.12958, 11.55845"||
       document.getElementById("select-station").value=="48.12917, 11.57439"||
       document.getElementById("select-station").value=="48.12573, 11.55057"){
-       document.getMlementById("select-housing").removeAttribute("hidden");
+
        document.getElementById("0-0").disabled = true; 
        document.getElementById("1-0").disabled = true;
         document.getElementById("1-1").disabled = true;
@@ -246,7 +246,7 @@ function myFunction() {
       document.getElementById("select-station").value=="48.15577, 11.56680"||
       document.getElementById("select-station").value=="48.14965, 11.58081"||
       document.getElementById("select-station").value=="48.14790, 11.55685"){
-        document.getMlementById("select-housing").removeAttribute("hidden");
+
         document.getElementById("0-0").disabled = true;
         document.getElementById("1-0").disabled = true;
         document.getElementById("1-1").disabled = true;
@@ -277,8 +277,8 @@ function myFunction() {
       document.getElementById("select-station").value=="48.16683, 11.57867"||
       document.getElementById("select-station").value=="48.17121, 11.57288"||
       document.getElementById("select-station").value=="48.17553, 11.56641"){
-        document.getMlementById("select-housing").removeAttribute("hidden");
-        document.getElementById("0-0").disabled = false;
+
+        document.getElementById("0-0").disabled = true;
         document.getElementById("1-0").disabled = true;
         document.getElementById("1-1").disabled = true;
         document.getElementById("1-2").disabled = true;

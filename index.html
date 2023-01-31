@@ -350,29 +350,22 @@ function myFunction() {
                     {
 //                         document.write("step");
                         if(data[row].Position=="sidewalk-road")
-//                         {marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon}).bindPopup("<h3>Step</h3><h4>on the sidewalk</h4><br>"+"<img src=" + icon_url +" class=ppsize"+ ">" );}
-                        {marker = L.marker([data[row].lat,data[row].lng],{icon: AlertIcon}).bindPopup("<b>Step</b><br>on the sidewalk</b><br>"+"<img src=" + icon_url +" class=ppsize"+ ">");}
+                       {marker = L.marker([data[row].lat,data[row].lng],{icon: AlertIcon}).bindPopup("<b>Step</b><br>on the sidewalk</b><br>"+"<img src=" + icon_url +" class=ppsize"+ ">",{offset: L.point(15, 5)});}
                         
                         else if(data[row].Position=="sidewalk-wall")
-                            {marker = L.marker([data[row].lat,data[row].lng],{icon: AlertIcon}).bindPopup("<b>Step</b><br>on the wall of sidewalk</b><br>"+"<img src=" + icon_url +" class=ppsize"+ ">");}
-//                         {marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon}).bindPopup("<h3>Step</h3><h4>on the wall of sidewalk</h4><br>"+"<img src=" + icon_url +" class=ppsize"+ ">" );}
+                            {marker = L.marker([data[row].lat,data[row].lng],{icon: AlertIcon}).bindPopup("<b>Step</b><br>on the wall of sidewalk</b><br>"+"<img src=" + icon_url +" class=ppsize"+ ">",{offset: L.point(15, 5)});}
                         else
-                            {marker = L.marker([data[row].lat,data[row].lng],{icon: AlertIcon}).bindPopup("<b>Step</b><br>on the road</b><br>"+"<img src=" + icon_url +" class=ppsize"+ ">");}
-//                         {marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon}).bindPopup("<h3>Step</h3><h4>on the road</h4><br>"+"<img src=" + icon_url +" class=ppsize"+ ">" );}
+                            {marker = L.marker([data[row].lat,data[row].lng],{icon: AlertIcon}).bindPopup("<b>Step</b><br>on the road</b><br>"+"<img src=" + icon_url +" class=ppsize"+ ">",{offset: L.point(15, 5)});}
                      }
                      else
                      {
                          if(data[row].Scale==3)
                          {
-//                              document.write("Large");
                              if(data[row].Position=="sidewalk-road")
                              {marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon}).bindPopup("<b>Large Construction</b><br>on the sidewalk</b><br>"+"<img src=" + icon_url +" class=ppsize"+ ">" );}
-//                              {marker = L.marker([data[row].lat,data[row].lng],{icon: AlertIcon});}
-                             else if(data[row].Position=="sidewalk-wall")
-//                              {marker = L.marker([data[row].lat,data[row].lng],{icon: AlertIcon});}
+                            else if(data[row].Position=="sidewalk-wall")
                              {marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon}).bindPopup("<b>Large Construction</b><br>on the wall of sidewalk</b><br>"+"<img src=" + icon_url +" class=ppsize"+ ">" );}
                              else
-//                              {marker = L.marker([data[row].lat,data[row].lng],{icon: AlertIcon});}
                              {marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon}).bindPopup("<b>Large Construction</b><br>on the road</b><br>"+"<img src=" + icon_url +" class=ppsize"+ ">" );}
                          }
                          else if(data[row].Scale==2)

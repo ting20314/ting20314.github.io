@@ -224,19 +224,28 @@ var line3 = [{ //Petuelring-HBF-Karlsplatz-Marienplatz-Isartorplatz
 var myStyle = {
     "color": "#ff7800",
     "weight": 5,
-    "opacity": 0.85
+    "opacity": 0.85,
+    "dashArray": '10 10',
+    "lineCap": 'round',
+    "lineJoin": 'round'
 };
 
 var myStyle2 = {
     "color": "#00FF00",
     "weight": 5,
-    "opacity": 0.85
+    "opacity": 0.85,
+    "dashArray": '10 10',
+    "lineCap": 'round',
+    "lineJoin": 'round'
 };
 
 var myStyle3 = {
     "color": "#A020F0",
     "weight": 5,
-    "opacity": 0.85
+    "opacity": 0.85,
+    "dashArray": '10 10',
+    "lineCap": 'round',
+    "lineJoin": 'round'
 };
 
 var ROUTE1 = L.geoJSON(line1, {

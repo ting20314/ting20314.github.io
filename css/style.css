@@ -1,16 +1,23 @@
 #map_div{
     transform: scale(1);
-    height: 100vh;
+    height: 75vh;
 }
 h1 {
-    margin: 25px;
+    margin: 15px;
+    width: 500px;
+    margin-left: 495px;
     text-align: center;
-    color: black;
-    background-color: orange;
+    color: white;
+    background-color: rgba(255, 136, 0, 0.741);
+    font-family: 'Philosopher', sans-serif;
+    box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 p {
     text-align: center;
-
+    font-family: 'Philosopher', sans-serif;
+    box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);
 }
 

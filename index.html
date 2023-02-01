@@ -351,49 +351,49 @@ function myFunction() {
                     {
 //                         document.write("step");
                         if(data[row].Position=="sidewalk-road")
-                       {marker = L.marker([data[row].lat,data[row].lng],{icon: AlertIcon}).bindPopup("<b>Step</b><br>on the sidewalk</b><br>"+"<img src=" + icon_url +" class=ppsize"+ ">",{offset: L.point(15, 5)});}
+                       {marker = L.marker([data[row].Latitude,data[row].Longitude],{icon: AlertIcon}).bindPopup("<b>Step</b><br>on the sidewalk</b><br>"+"<img src=" + icon_url +" class=ppsize"+ ">",{offset: L.point(15, 5)});}
                         
                         else if(data[row].Position=="sidewalk-wall")
-                            {marker = L.marker([data[row].lat,data[row].lng],{icon: AlertIcon}).bindPopup("<b>Step</b><br>on the wall of sidewalk</b><br>"+"<img src=" + icon_url +" class=ppsize"+ ">",{offset: L.point(15, 5)});}
+                            {marker = L.marker([data[row].Latitude,data[row].Longitude],{icon: AlertIcon}).bindPopup("<b>Step</b><br>on the wall of sidewalk</b><br>"+"<img src=" + icon_url +" class=ppsize"+ ">",{offset: L.point(15, 5)});}
                         else
-                            {marker = L.marker([data[row].lat,data[row].lng],{icon: AlertIcon}).bindPopup("<b>Step</b><br>on the road</b><br>"+"<img src=" + icon_url +" class=ppsize"+ ">",{offset: L.point(15, 5)});}
+                            {marker = L.marker([data[row].Latitude,data[row].Longitude],{icon: AlertIcon}).bindPopup("<b>Step</b><br>on the road</b><br>"+"<img src=" + icon_url +" class=ppsize"+ ">",{offset: L.point(15, 5)});}
                      }
                      else
                      {
                          if(data[row].Scale==3)
                          {
                              if(data[row].Position=="sidewalk-road")
-                             {marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon}).bindPopup("<b>Large Construction</b><br>on the sidewalk</b><br>"+"<img src=" + icon_url +" class=ppsize"+ ">",{offset: L.point(15, 5)} );}
+                             {marker = L.marker([data[row].Latitude, data[row].Longitude],{icon: AlertIcon}).bindPopup("<b>Large Construction</b><br>on the sidewalk</b><br>"+"<img src=" + icon_url +" class=ppsize"+ ">",{offset: L.point(15, 5)} );}
                             else if(data[row].Position=="sidewalk-wall")
-                             {marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon}).bindPopup("<b>Large Construction</b><br>on the wall of sidewalk</b><br>"+"<img src=" + icon_url +" class=ppsize"+ ">",{offset: L.point(15, 5) });}
+                             {marker = L.marker([data[row].Latitude, data[row].Longitude],{icon: AlertIcon}).bindPopup("<b>Large Construction</b><br>on the wall of sidewalk</b><br>"+"<img src=" + icon_url +" class=ppsize"+ ">",{offset: L.point(15, 5) });}
                              else
-                             {marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon}).bindPopup("<b>Large Construction</b><br>on the road</b><br>"+"<img src=" + icon_url +" class=ppsize"+ ">" ,{offset: L.point(15, 5)});}
+                             {marker = L.marker([data[row].Latitude, data[row].Longitude],{icon: AlertIcon}).bindPopup("<b>Large Construction</b><br>on the road</b><br>"+"<img src=" + icon_url +" class=ppsize"+ ">" ,{offset: L.point(15, 5)});}
                          }
                          else if(data[row].Scale==2)
                          {
 //                               document.write("Med");
                              if(data[row].Position=="sidewalk-road")
-//                                  {marker = L.marker([data[row].lat,data[row].lng],{icon: AlertIcon});}
-                             {marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon}).bindPopup("<b>Medium Construction</b><br>on the sidewalk</b><br>"+"<img src=" + icon_url +" class=ppsize"+ ">",{offset: L.point(15, 5)} );}
+//                                  {marker = L.marker([data[row].Latitude,data[row].Longitude],{icon: AlertIcon});}
+                             {marker = L.marker([data[row].Latitude, data[row].Longitude],{icon: AlertIcon}).bindPopup("<b>Medium Construction</b><br>on the sidewalk</b><br>"+"<img src=" + icon_url +" class=ppsize"+ ">",{offset: L.point(15, 5)} );}
                              else if(data[row].Position=="sidewalk-wall")
-//                                  {marker = L.marker([data[row].lat,data[row].lng],{icon: AlertIcon});}
-                             {marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon}).bindPopup("<b>Medium Construction</b><br>on the wall of sidewalk</b><br>"+"<img src=" + icon_url +" class=ppsize"+ ">",{offset: L.point(15, 5) });}
+//                                  {marker = L.marker([data[row].Latitude,data[row].Longitude],{icon: AlertIcon});}
+                             {marker = L.marker([data[row].Latitude, data[row].Longitude],{icon: AlertIcon}).bindPopup("<b>Medium Construction</b><br>on the wall of sidewalk</b><br>"+"<img src=" + icon_url +" class=ppsize"+ ">",{offset: L.point(15, 5) });}
                              else
-//                                  {marker = L.marker([data[row].lat,data[row].lng],{icon: AlertIcon});}
-                             {marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon}).bindPopup("<b>Medium Construction</b><br>on the road</b><br>"+"<img src=" + icon_url +" class=ppsize"+ ">" ,{offset: L.point(15, 5)});}
+//                                  {marker = L.marker([data[row].Latitude,data[row].Longitude],{icon: AlertIcon});}
+                             {marker = L.marker([data[row].Latitude, data[row].Longitude],{icon: AlertIcon}).bindPopup("<b>Medium Construction</b><br>on the road</b><br>"+"<img src=" + icon_url +" class=ppsize"+ ">" ,{offset: L.point(15, 5)});}
                          }
                          else
                          {
 //                               document.write("Small");
                              if(data[row].Position=="sidewalk-road")
-//                                  {marker = L.marker([data[row].lat,data[row].lng]);}
-                             {marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon}).bindPopup("<b>Small Construction</b><br>on the sidewalk</b><br>"+"<img src=" + icon_url +" class=ppsize"+ ">",{offset: L.point(15, 5)} );}
+//                                  {marker = L.marker([data[row].Latitude,data[row].Longitude]);}
+                             {marker = L.marker([data[row].Latitude, data[row].Longitude],{icon: AlertIcon}).bindPopup("<b>Small Construction</b><br>on the sidewalk</b><br>"+"<img src=" + icon_url +" class=ppsize"+ ">",{offset: L.point(15, 5)} );}
                              else if(data[row].Position=="sidewalk-wall")
-//                                  {marker = L.marker([data[row].lat,data[row].lng]);}
-                             {marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon}).bindPopup("<b>Small Construction</b><br>on the wall of sidewalk</b><br>"+"<img src=" + icon_url +" class=ppsize"+ ">",{offset: L.point(15, 5)} );}
+//                                  {marker = L.marker([data[row].Latitude,data[row].Longitude]);}
+                             {marker = L.marker([data[row].Latitude, data[row].Longitude],{icon: AlertIcon}).bindPopup("<b>Small Construction</b><br>on the wall of sidewalk</b><br>"+"<img src=" + icon_url +" class=ppsize"+ ">",{offset: L.point(15, 5)} );}
                              else
-//                                  {marker = L.marker([data[row].lat,data[row].lng]);}
-                             {marker = L.marker([data[row].lat, data[row].lng],{icon: AlertIcon}).bindPopup("<b>Small Construction</b><br>on the road</b><br>"+"<img src=" + icon_url +" class=ppsize"+ ">" ,{offset: L.point(15, 5)});}
+//                                  {marker = L.marker([data[row].Latitude,data[row].Longitude]);}
+                             {marker = L.marker([data[row].Latitude, data[row].Longitude],{icon: AlertIcon}).bindPopup("<b>Small Construction</b><br>on the road</b><br>"+"<img src=" + icon_url +" class=ppsize"+ ">" ,{offset: L.point(15, 5)});}
                          }
                      }
                     

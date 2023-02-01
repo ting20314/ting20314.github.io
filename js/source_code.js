@@ -74,7 +74,7 @@ function closeModal(mmodal) {
 	
 	
     // create map object
-    map = L.map('map_div',  {center:[48.13743,11.57549], zoom:13
+    map = L.map('map_div',  {center:[48.14605, 11.57088], zoom:13
         , zoomControl:false });
 
     //popup Minar e Pakistan

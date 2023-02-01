@@ -7,7 +7,6 @@
   font-family: 'Philosopher', sans-serif;
   padding: 10px;
   border-radius: 15px;
-  background: rgba(255, 136, 0, 0.941);
   z-index: 2000; }
   .leaflet-sidebar.left {
     left: -500px;

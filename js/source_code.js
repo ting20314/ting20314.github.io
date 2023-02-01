@@ -327,7 +327,7 @@ L.geoJSON(lineJSON).addTo(map);
 });
 document.getElementById('select-station').addEventListener('change', function(e){
 	if(document.getElementById('select-station').value=="-11"){
-	map.flyTo([48.13743,11.57549],13);}
+	map.flyTo([48.14605, 11.57088],13);}
 	else
 	{
     let coords = e.target.value.split(",");

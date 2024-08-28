@@ -12,9 +12,9 @@ We have managed to create a website that is especially helpful for wheelchair us
 We learned two very different but important things, in the technical and in the human field. Firstly, we learned about the things that can be done in web developing, in the process of creating an interactive map and website. Additionally, we learned about the needs of disabled people and their mobility issues in big cities such as Munich.
 ### What's next
 We believe that there is still a lot to be done within this project, as we addressed only the basic needs of our target user group in mobility and accessibility. Considering all the different types of barriers in cities, many features and tools can be added in order to improve the user experience, as well as expanding the study area to the whole city.
-![Selection of an U-Bahn Station.](https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_1280/https://cartographymaster.eu/wp-content/uploads/2023/02/Image_2-1280x888.png title="Selection of an U-Bahn Station.")
-![Map View.](https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_1280/https://cartographymaster.eu/wp-content/uploads/2023/02/Image_3-1280x975.png title="Map View.")
-![Welcoming Page with Instructions on "How to Use".](https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_1280/https://cartographymaster.eu/wp-content/uploads/2023/02/Image_4-1280x859.png title="Welcoming Page with Instructions on "How to Use".")
+![Selection of an U-Bahn Station.](https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_1280/https://cartographymaster.eu/wp-content/uploads/2023/02/Image_2-1280x888.png)
+![Map View.](https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_1280/https://cartographymaster.eu/wp-content/uploads/2023/02/Image_3-1280x975.png)
+![Welcoming Page with Instructions on "How to Use".](https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_1280/https://cartographymaster.eu/wp-content/uploads/2023/02/Image_4-1280x859.png)
 ### Sources
 Leaflet — an open-source JavaScript library for interactive maps. (n.d.). https://leafletjs.com/
 Redaktion mvg.de. (n.d.). MVG - Die Mobilitätsmacher*innen. https://www.mvg.de/
